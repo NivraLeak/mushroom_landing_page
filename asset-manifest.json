@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mushoroom_lading_page/static/css/main.073c9b0a.css",
+    "main.js": "/mushoroom_lading_page/static/js/main.a0ae5d0f.js",
+    "static/js/787.36fb4f5f.chunk.js": "/mushoroom_lading_page/static/js/787.36fb4f5f.chunk.js",
+    "static/media/logo.svg": "/mushoroom_lading_page/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/mushoroom_lading_page/index.html",
+    "main.073c9b0a.css.map": "/mushoroom_lading_page/static/css/main.073c9b0a.css.map",
+    "main.a0ae5d0f.js.map": "/mushoroom_lading_page/static/js/main.a0ae5d0f.js.map",
+    "787.36fb4f5f.chunk.js.map": "/mushoroom_lading_page/static/js/787.36fb4f5f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.a0ae5d0f.js"
+  ]
+}
