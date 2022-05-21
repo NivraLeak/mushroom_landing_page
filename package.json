@@ -2,7 +2,7 @@
   "name": "landing_mushroom_page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://nivraleak.github.io/mushoroom_lading_page",
+  "homepage": "https://nivraleak.github.io/mushroom_landing_page",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
