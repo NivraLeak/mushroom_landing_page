@@ -1,9 +1,16 @@
 {
   "files": {
     "main.css": "/mushroom_landing_page/static/css/main.f50318aa.css",
-    "main.js": "/mushroom_landing_page/static/js/main.95f9fb9f.js",
-    "static/media/Home Video.mp4": "/mushroom_landing_page/static/media/Home Video.d4bf2265b2f4a01a1582.mp4",
+    "main.js": "/mushroom_landing_page/static/js/main.7c1c4639.js",
+    "static/media/enigma 1.svg": "/mushroom_landing_page/static/media/enigma 1.af49acde20332cd0f55d0b8f5e2fb5e7.svg",
+    "static/media/melek 1.svg": "/mushroom_landing_page/static/media/melek 1.e57ae911e67c128262f89837856b928c.svg",
+    "static/media/gandalfHomeVideo.mp4": "/mushroom_landing_page/static/media/gandalfHomeVideo.a2e4136cdfa56ccbfe07.mp4",
+    "static/media/b+Fondo 1.svg": "/mushroom_landing_page/static/media/b+Fondo 1.ab340bfa54837ff4ae4c8bcaa4253ee2.svg",
+    "static/media/ThaiKohsumui 1.svg": "/mushroom_landing_page/static/media/ThaiKohsumui 1.3fa19a3a8230065e7fb22a7b6a0c018b.svg",
+    "static/media/gandalf03 1.svg": "/mushroom_landing_page/static/media/gandalf03 1.a4ab329ff7d5dd80bdd8980b56942e67.svg",
+    "static/media/gandalf 1.svg": "/mushroom_landing_page/static/media/gandalf 1.f48bb7bfa806728b0142a9be75a6a53e.svg",
     "static/media/akaya-telivigala-all-400-normal.woff": "/mushroom_landing_page/static/media/akaya-telivigala-all-400-normal.78fd8cb2a221beeb77ce.woff",
+    "static/media/mushi.png": "/mushroom_landing_page/static/media/mushi.46598336e4721330f85c.png",
     "static/media/akaya-telivigala-telugu-400-normal.woff2": "/mushroom_landing_page/static/media/akaya-telivigala-telugu-400-normal.cc24af700d82d6ced8f6.woff2",
     "static/media/bighead-1.svg": "/mushroom_landing_page/static/media/bighead-1.f64b34fdf58b191b0167968db801f681.svg",
     "static/media/akaya-telivigala-latin-400-normal.woff2": "/mushroom_landing_page/static/media/akaya-telivigala-latin-400-normal.6adfb2bb1dd65aa73a6c.woff2",
@@ -22,10 +29,10 @@
     "static/media/Arrow.svg": "/mushroom_landing_page/static/media/Arrow.2aa046cef6c722596b055a335b4a9792.svg",
     "index.html": "/mushroom_landing_page/index.html",
     "main.f50318aa.css.map": "/mushroom_landing_page/static/css/main.f50318aa.css.map",
-    "main.95f9fb9f.js.map": "/mushroom_landing_page/static/js/main.95f9fb9f.js.map"
+    "main.7c1c4639.js.map": "/mushroom_landing_page/static/js/main.7c1c4639.js.map"
   },
   "entrypoints": [
     "static/css/main.f50318aa.css",
-    "static/js/main.95f9fb9f.js"
+    "static/js/main.7c1c4639.js"
   ]
 }
