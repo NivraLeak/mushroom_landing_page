@@ -135,17 +135,18 @@ const About = () => {
         <Box> <Carousel/> </Box>
         <Box>
             <Title>
-                Welcome to the <br/>Weirdos Club.
+                Bienvenidos a la comunidad<br/> Mushi genetics.
             </Title>
             <SubText>
-                The WEIRDOS CLUB is a private collection of NFT-unique digital collectibles. The weirdos are stored as ERC-721 tokens on the Ethereum blockchain and hosted on IPFS.
+                Puedes iniciar tu cultivo desde viales o placas si ya haz experimentado todo el proceso de cultivo. <br/>
+                Si eres nuevo, te recomendamos adquirir un <b>kit de cultivo</b> de esta forma podras iniciar desde el momento que te llegue tu kit.
             </SubText>
             <SubTextLight>
-                With more than 200+ hand drawn traits, each NFT is unique and comes with a membership to an exclusive group of successful investors. Join an ambitious ever-growing community with multiple benefits and utilities.
+                Mushi genetics fue creado para ser el primer proveedor de artefactos de cultivo indor de hongos magicos. <br/>
             </SubTextLight>
             <ButtonContainer>
                 <ThemeProvider theme={dark}>
-                    <Button text="JOIN OUR DISCORD" link="#"/>
+                    <Button text="Comunidad Facebook" link="#"/>
                 </ThemeProvider>
             </ButtonContainer>
 

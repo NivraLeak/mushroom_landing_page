@@ -147,20 +147,20 @@ const Navigation = () => {
         </HamburgerMenu>
         <Menu click={click}>
           <MenuItem onClick={()=> scrollTo('home')}>Home</MenuItem>
-          <MenuItem onClick={()=> scrollTo('about')}>About</MenuItem>
-          <MenuItem onClick={()=> scrollTo('roadmap')}>RoadMap</MenuItem>
-          <MenuItem onClick={()=> scrollTo('showcase')}>Showcase</MenuItem>
-          <MenuItem onClick={()=> scrollTo('team')}>Team</MenuItem>
-          <MenuItem onClick={()=> scrollTo('faq')}>Faq</MenuItem>
+          <MenuItem onClick={()=> scrollTo('about')}>¿Qué es <br/> MushiGenetics?</MenuItem>
+          <MenuItem onClick={()=> scrollTo('roadmap')}>Mapa de <br/> cultivo</MenuItem>
+          <MenuItem onClick={()=> scrollTo('showcase')}>Especies</MenuItem>
+          <MenuItem onClick={()=> scrollTo('team')}>MushiLovers</MenuItem>
+          <MenuItem onClick={()=> scrollTo('faq')}>Envios</MenuItem>
           <MenuItem>
             <div className="mobile">
-              <Button text="Connect wallet" link="http://google.com"/>
+              <Button text="Connect with mushi" link="http://google.com"/>
             </div>
           </MenuItem>
         </Menu>
 
         <div className="desktop">
-          <Button text="Connect Wallet" link="https://google.com"/>
+          <Button text="Contacta a mushi" link="https://google.com"/>
         </div>
       </NavBar>
     </Section>

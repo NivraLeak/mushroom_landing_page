@@ -4,7 +4,7 @@ export const light = {
     bodyRgba:"255,255,255",
     textRgba:"32,32,32",
 
-    carouselColor: "#EEEDDE",
+        carouselColor: "#454343",
 
     fontxs:'0.65em',
     fontsm:'0.875em',
@@ -13,7 +13,7 @@ export const light = {
     fontlg:'1em',
     fontxxl:'3em',
     fontxxxl:'4em',
-
+    fontcard:'1.5em',
     fontButton:'0.875em',
 
     navHeight: '5rem',
@@ -31,6 +31,7 @@ export const dark = {
     fontxs:'0.75em',
     fontsm:'0.875em',
     fontmd:'1em',
+    fontcard:'1.5em',
     fontxl:'2em',
     fontxxl:'3em',
     fontxxxl:'4em',

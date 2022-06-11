@@ -74,7 +74,7 @@ const TypeWriterText = () => {
   return (
     <>
         <Title>
-            Discover a new era of cool
+            Bienvenido a Genetics Mushi
             <Typewriter
                 options= {{
                     autoStart: true,
@@ -82,22 +82,22 @@ const TypeWriterText = () => {
                 }}
 
                 onInit={(typewriter) => {
-                    typewriter.typeString('<span class="text-1">NFTs.</span>')
+                    typewriter.typeString('<span class="text-1">Magic Mushrooms?????</span>')
                         .pauseFor(2000)
                         .deleteAll()
-                        .typeString('<span class="text-2">Collectible Items.</span>')
+                        .typeString('<span class="text-2">Tú también puedes cultivarlos</span>')
                         .pauseFor(2000)
                         .deleteAll()
-                        .typeString('<span class="text-3">Ape Killers!</span>')
+                        .typeString('<span class="text-3">Cultiva tu propia medicina</span>')
                         .pauseFor(2000)
                         .deleteAll()
                         .start()
                 }}
             />
         </Title>
-        <SubTitle> Bored Of Apes? Try Something New.</SubTitle>
+        <SubTitle> Genetics mushi tiene como objetivo ser el primer proveedor de cultivo de hongos cubensis en Perú. </SubTitle>
         <ButtonContainer>
-            <Button text="Explore" link="#about"/>
+            <Button text="Connect with mushi" link="#about"/>
         </ButtonContainer>
     </>
   )

@@ -7,20 +7,19 @@ import "swiper/css/navigation";
 
 import {Pagination,Navigation,Autoplay, EffectCards} from "swiper";
 
-import img1 from '../../assets/Nfts/bighead-1.svg';
-import img2 from '../../assets/Nfts/bighead-2.svg';
-import img3 from '../../assets/Nfts/bighead-3.svg';
-import img4 from '../../assets/Nfts/bighead-4.svg';
-import img5 from '../../assets/Nfts/bighead-5.svg';
-import img6 from '../../assets/Nfts/bighead-6.svg';
-import img7 from '../../assets/Nfts/bighead-7.svg';
-import img8 from '../../assets/Nfts/bighead-8.svg';
-import img9 from '../../assets/Nfts/bighead-9.svg';
+import img1 from '../../assets/strains/strainsSvg/melek 1.svg'
+import img2 from '../../assets/strains/strainsSvg/ThaiKohsumui 1.svg';
+import img3 from '../../assets/strains/strainsSvg/enigma 1.svg';
+import img4 from '../../assets/strains/strainsSvg/gandalf 1.svg';
+import img5 from '../../assets/strains/strainsSvg/gandalf03 1.svg';
+import img6 from '../../assets/strains/strainsSvg/b+Fondo 1.svg';
+
 
 import Arrow from '../../assets/Arrow.svg';
+import Card from "../card";
 
 const Container = styled.div`
-  width: 25vw;
+  width: 21vw;
   height: 70vh;
 
   @media (max-width: 70em){
@@ -28,17 +27,17 @@ const Container = styled.div`
   }
 
   @media (max-width: 64em){
-    height: 50vh;
+    height: 55vh;
     width: 30vw;
   }
   @media (max-width: 48em){
     height: 50vh;
-    width: 40vw;
+    width: 35vw;
   }
 
   @media (max-width: 30em){
     height: 45vh;
-    width: 60vw;
+    width: 55vw;
   }
   
   .swiper{
@@ -46,7 +45,7 @@ const Container = styled.div`
     height: 100%;
   }
   .swiper-slide{
-        background-color: ${props=>props.theme.carouselColor};
+    background-color: ${props=>props.theme.carouselColor};
     border-radius: 20px;
     
     display: flex;
@@ -95,6 +94,8 @@ const Container = styled.div`
   }
 `
 
+
+
 const Carousel = () => {
     return (
         <Container>
@@ -113,15 +114,12 @@ const Carousel = () => {
             modules={[EffectCards,Pagination,Navigation,Autoplay]}
             className="mySwiper"
             >
-                <SwiperSlide> <img src={img1} alt="the weirdos"/> </SwiperSlide>
-                <SwiperSlide> <img src={img2} alt="the weirdos"/> </SwiperSlide>
-                <SwiperSlide> <img src={img3} alt="the weirdos"/> </SwiperSlide>
-                <SwiperSlide> <img src={img4} alt="the weirdos"/> </SwiperSlide>
-                <SwiperSlide> <img src={img5} alt="the weirdos"/> </SwiperSlide>
-                <SwiperSlide> <img src={img6} alt="the weirdos"/> </SwiperSlide>
-                <SwiperSlide> <img src={img7} alt="the weirdos"/> </SwiperSlide>
-                <SwiperSlide> <img src={img8} alt="the weirdos"/> </SwiperSlide>
-                <SwiperSlide> <img src={img9} alt="the weirdos"/> </SwiperSlide>
+                <SwiperSlide> <Card img={img1} name="Melek" visuales={4} dificultad={3} produccion={2} sensitivo={3} /> </SwiperSlide>
+                <SwiperSlide> <Card img={img2} name="Thai koh sumui" visuales={2} dificultad={1} produccion={4} sensitivo={4}/> </SwiperSlide>
+                <SwiperSlide> <Card img={img3} name="Enigma" visuales={5} dificultad={5} produccion={1} sensitivo={5}/> </SwiperSlide>
+                <SwiperSlide> <Card img={img4} name="Gandalf" visuales={5} dificultad={4} produccion={2} sensitivo={4}/> </SwiperSlide>
+                <SwiperSlide> <Card img={img5} name="Gandalf 0.2" visuales={5} dificultad={4} produccion={2} sensitivo={4}/> </SwiperSlide>
+                <SwiperSlide> <Card img={img6} name="B+ Leucinistico" visuales={2} dificultad={1} produccion={5} sensitivo={4}/> </SwiperSlide>
             </Swiper>
 
         </Container>

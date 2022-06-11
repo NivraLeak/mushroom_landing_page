@@ -9,8 +9,6 @@ const Section = styled.section`
   background-color: ${props=>props.theme.body};
   position: relative;
 `;
-
-
 const Title = styled.h2`
   font-size: ${props=> props.theme.fontxxl};
   text-transform: capitalize;
@@ -158,12 +156,12 @@ const procesoCultivo = [
     {
         id:"1",
         title:"Viales o Micelio liquido",
-        subText:"Una vez obtenido micelio liquido podremos utilizarlos en viales. Estos podremos utilizarlos para inocular y exparcir el micelio de la especie que hayamos elegido."
+        subText:"Micelio liquido es la especie del hongo en crecimiento en un medio de cultivo liquido. (Mi medio liquido favorito es 2% malta y 2% maple del total de agua, todo ello esterilizado 20 minutos a 15psi.)"
     },
     {
         id:"2",
         title:"Grano esteril",
-        subText:"El grano esteril no es mas que arroz u otro grano a medio coser para asi poder facilitar la colonizacion del hongo, todo esto en una bolsa de cultivo y esterilizada a olla a presion duran 90 minutos."
+        subText:"El grano esteril no es mas que arroz u otro grano a medio coser para asi poder facilitar la colonizacion del hongo, todo esto en una bolsa de cultivo y esterilizada a olla a presion durante 90 minutos."
     },
     {
         id:"3",
@@ -267,7 +265,7 @@ const RoadMap = () => {
 
   return (
     <Section id="roadmap">
-      <Title> RoadMap</Title>
+      <Title> Mapa de cultivo</Title>
         <Container>
             <SvgContainer>
                 <DrawSvg />
