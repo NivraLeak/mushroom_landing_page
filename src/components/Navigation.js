@@ -38,6 +38,7 @@ align-items: center;
 list-style:none;
 
   @media (max-width: 64em){
+    /* 1024px */
     position: fixed;
     top: ${props => props.theme.navHeight};
     left: 0;

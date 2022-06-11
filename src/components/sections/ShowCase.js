@@ -20,6 +20,8 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   
+  overflow: hidden;
+  
   &>*:first-child{
     animation-duration: 20s;
     @media(max-width: 30em) {
