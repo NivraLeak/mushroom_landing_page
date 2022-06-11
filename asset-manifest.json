@@ -1,16 +1,31 @@
 {
   "files": {
-    "main.css": "/mushroom_landing_page/static/css/main.073c9b0a.css",
-    "main.js": "/mushroom_landing_page/static/js/main.e672657e.js",
-    "static/js/787.36fb4f5f.chunk.js": "/mushroom_landing_page/static/js/787.36fb4f5f.chunk.js",
-    "static/media/logo.svg": "/mushroom_landing_page/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/mushroom_landing_page/static/css/main.f50318aa.css",
+    "main.js": "/mushroom_landing_page/static/js/main.95f9fb9f.js",
+    "static/media/Home Video.mp4": "/mushroom_landing_page/static/media/Home Video.d4bf2265b2f4a01a1582.mp4",
+    "static/media/akaya-telivigala-all-400-normal.woff": "/mushroom_landing_page/static/media/akaya-telivigala-all-400-normal.78fd8cb2a221beeb77ce.woff",
+    "static/media/akaya-telivigala-telugu-400-normal.woff2": "/mushroom_landing_page/static/media/akaya-telivigala-telugu-400-normal.cc24af700d82d6ced8f6.woff2",
+    "static/media/bighead-1.svg": "/mushroom_landing_page/static/media/bighead-1.f64b34fdf58b191b0167968db801f681.svg",
+    "static/media/akaya-telivigala-latin-400-normal.woff2": "/mushroom_landing_page/static/media/akaya-telivigala-latin-400-normal.6adfb2bb1dd65aa73a6c.woff2",
+    "static/media/bighead-3.svg": "/mushroom_landing_page/static/media/bighead-3.ee360106bab5dce5e9d68a2a0ea516ad.svg",
+    "static/media/bighead-9.svg": "/mushroom_landing_page/static/media/bighead-9.692c03806a4243f3268ae6a1b609da5c.svg",
+    "static/media/bighead-6.svg": "/mushroom_landing_page/static/media/bighead-6.9b137ad1d3ff9e4f48ddc8d8e2529b77.svg",
+    "static/media/bighead-7.svg": "/mushroom_landing_page/static/media/bighead-7.a86295610ee963f5d6184a106b3dafb4.svg",
+    "static/media/bighead-4.svg": "/mushroom_landing_page/static/media/bighead-4.70326ba87ed2c99777c9f658ac927f9c.svg",
+    "static/media/bighead-8.svg": "/mushroom_landing_page/static/media/bighead-8.a80df18a491b8829b8c195698e6ac39f.svg",
+    "static/media/sora-all-400-normal.woff": "/mushroom_landing_page/static/media/sora-all-400-normal.fc2a204a844d60c30272.woff",
+    "static/media/bighead-2.svg": "/mushroom_landing_page/static/media/bighead-2.531bee23abb8a4fd0a516a9a9d50bcaf.svg",
+    "static/media/bighead-5.svg": "/mushroom_landing_page/static/media/bighead-5.95b9953042de5fd68dc5dc0558e207d0.svg",
+    "static/media/akaya-telivigala-latin-ext-400-normal.woff2": "/mushroom_landing_page/static/media/akaya-telivigala-latin-ext-400-normal.806924fe3d6edb5e4e59.woff2",
+    "static/media/sora-latin-400-normal.woff2": "/mushroom_landing_page/static/media/sora-latin-400-normal.7055d291e674243dedf8.woff2",
+    "static/media/sora-latin-ext-400-normal.woff2": "/mushroom_landing_page/static/media/sora-latin-ext-400-normal.101a61e4b152678c5ec1.woff2",
+    "static/media/Arrow.svg": "/mushroom_landing_page/static/media/Arrow.2aa046cef6c722596b055a335b4a9792.svg",
     "index.html": "/mushroom_landing_page/index.html",
-    "main.073c9b0a.css.map": "/mushroom_landing_page/static/css/main.073c9b0a.css.map",
-    "main.e672657e.js.map": "/mushroom_landing_page/static/js/main.e672657e.js.map",
-    "787.36fb4f5f.chunk.js.map": "/mushroom_landing_page/static/js/787.36fb4f5f.chunk.js.map"
+    "main.f50318aa.css.map": "/mushroom_landing_page/static/css/main.f50318aa.css.map",
+    "main.95f9fb9f.js.map": "/mushroom_landing_page/static/js/main.95f9fb9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.e672657e.js"
+    "static/css/main.f50318aa.css",
+    "static/js/main.95f9fb9f.js"
   ]
 }
