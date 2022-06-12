@@ -3,19 +3,19 @@ import styled from "styled-components";
 import DrawSvg from "../DrawSvg";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import img1 from '../../assets/strains/strainsSvg/b+Fondo 1.svg'
 
 const Section = styled.section`
-  width: 100vw;
-  background-color: ${props=>props.theme.body};
-  position: relative;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
 `;
 const Title = styled.h2`
   font-size: ${props=> props.theme.fontxxl};
-  text-transform: capitalize;
   color: ${props=>props.theme.text};
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 1rem auto;
   border-bottom: 2px solid ${props=>props.theme.text};
   width: fit-content;
@@ -25,20 +25,30 @@ const Title = styled.h2`
   }
 `
 const Container = styled.div`
-  width: 80%;
-  height: 500vh;
-  background-color: ${props=>props.theme.body};
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 300vh;
+  width: 85%;
+  background-image: linear-gradient(
+          rgba(0.5, 0.2, 0.1, 0.25),
+          rgba(0.4, 0.1, 0.2, 0.5)
+  ), url("${props=> props.img}");
+  background-size: cover; 
+  background-position: center;
+  border-radius: 100px;
   position: relative;
-  
-  @media(max-width: 64em){
-    width: 80%;
+  padding-top: 5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  @media(max-width: 70em){
+    width: 100%;
+    border-radius: 70px;
   }
   @media(max-width: 48em) {
-    width: 90%;
+    width: 100%;
+    border-radius: 50px;
+  }
+  @media(max-width: 30em) {
+    width: 100%;
+    border-radius: 50px;
   }
 `;
 const SvgContainer = styled.div`
@@ -56,10 +66,6 @@ const Items = styled.ul`
   justify-content: center;
   align-items: center;
   //background-color: lightblue;
-
-  @media(max-width: 48em) {
-    width: 90%;
-  }
   
   &>*:nth-last-of-type(2n + 1){
     justify-content: start;
@@ -68,18 +74,18 @@ const Items = styled.ul`
     }
     
     div{
-      border-radius: 50px 0 50px 0;
+      border-radius: 40px;
       text-align: right;
       @media(max-width: 48em) {
-        border-radius: 50px 0 50px 0;
+        border-radius: 40px;
         text-align: left;
         p{
-          border-radius: 40px 0 40px 0;
+          border-radius: 30px;
         }
       }
     }
     p{
-      border-radius: 40px 0 40px 0;
+      border-radius: 30px;
 
     }
   }
@@ -90,18 +96,18 @@ const Items = styled.ul`
     }
   }
   div{
-    border-radius: 0 50px 0 50px;
+    border-radius: 30px;
     text-align: left;
     @media(max-width: 48em) {
-      border-radius: 50px 0 50px 0;
+      border-radius: 40px;
       text-align: left;
       p{
-        border-radius: 40px 0 40px 0;
+        border-radius: 30px;
       }
     }
   }
   p{
-    border-radius: 0 50px 0 50px;
+    border-radius: 30px;
     
   }
 `;
@@ -110,45 +116,88 @@ const Item = styled.li`
   height: 100%;
   display: flex;
 
-  @media(max-width: 48em) {
+  @media(max-width: 72em) {
     justify-content: flex-end; !important;
   }
 `;
 const ItemContainer = styled.div`
   width: 40%;
+  margin-top: 1rem;
   height: fit-content;
-  padding: 1rem;
-  border: 3px solid ${props=>props.theme.text};
+  padding: 0.5rem;
+  box-shadow: 0 0 15px 1px ${props=>props.theme.body};
+  //border: 2.5px solid ${props=>props.theme.text};
+  backdrop-filter: blur(5px);
   @media(max-width: 48em) {
     width: 70%;
   }
 `;
 const Box = styled.p`
   height: fit-content;
-  background-color: ${props => props.theme.carouselColor};
-  color: ${props=>props.theme.text};
-  padding: 1rem;
+  //background-color: ${props => props.theme.carouselColor};
+
+  color: ${props=>props.theme.body};
+  padding: 0 0 0 0.7rem;
   position: relative;
-  border: 1px solid ${props=>props.theme.text};
+  //border: 1px solid ${props=>props.theme.text};
 `;
 const SubTitle=styled.span`
   display: block;
   font-size: ${props => props.theme.fontxl};
-  color: ${props=>props.theme.text};
+  font-weight: 600;
+  color: ${props=>props.theme.body};
+  text-align: center;
   @media(max-width: 40em) {
     font-size: ${props=>props.theme.fontlg};
+    font-weight: 500;
+  }
+  @media(max-width: 70em) {
+    font-size: ${props=>props.theme.fontcard};
     font-weight: 600;
   }
 `
 const Text=styled.span`
   display: block;
   font-size: ${props => props.theme.fontsm };
-  color: ${props=>props.theme.text};
+  color: ${props=>props.theme.body};
   text-align: left;
   font-weight: 400;
-  margin: 0.5rem 0 ;
-  @media(max-width: 40em) {
+  margin: 0.5rem 0;
+  @media(max-width: 70em) {
+    font-size: ${props=>props.theme.fontLef};
+  }
+  @media(max-width: 48em) {
     font-size: ${props=>props.theme.fontxs};
+  }
+  @media(max-width: 30em) {
+    font-size: ${props=>props.theme.fontxs};
+  }
+`
+const LeafContainer = styled.div`
+  width: auto;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  img{
+    width: auto;
+    height: 13rem;
+    object-fit: cover;
+    border-radius: 30px ;
+    margin-left: 0.2rem;
+    @media(max-width: 70em) {
+      width: auto;
+      height: 10.5rem;
+    }
+    @media(max-width: 48em) {
+      width: auto;
+      height: 10rem;
+    }
+    @media(max-width: 30em) {
+      width: auto;
+      height: 9rem;
+    }
   }
 `
 
@@ -209,15 +258,20 @@ const procesoCultivo = [
     },
 ]
 
+
 const RoadMapItem = ({title,subText, addToRef}) => {
 
     return (
         <Item ref={addToRef}>
             <ItemContainer>
-                <Box>
-                    <SubTitle>{title}</SubTitle>
-                    <Text>{subText}</Text>
-                </Box>
+                <SubTitle>{title}</SubTitle>
+                <LeafContainer>
+                    <Box>
+                        <Text>{subText}</Text>
+                    </Box>
+                    <img src={img1} alt="b+ leu"/>
+                </LeafContainer>
+
             </ItemContainer>
         </Item>
     )
@@ -243,11 +297,11 @@ const RoadMap = () => {
                 {
                     y:'0'
                 },{
-                    y:'-30%',
+                    y:'-15%',
                     scrollTrigger:{
                         id: `section.${index + 1}`,
                         trigger:el,
-                        start:'top center+=200px',
+                        start:'top center+=50px',
                         end:'bottom center',
                         scrub:true,
                         //markers:true,
@@ -264,9 +318,9 @@ const RoadMap = () => {
     },[])
 
   return (
-    <Section id="roadmap">
+    <Section id="roadmap" img={img1}>
       <Title> Mapa de cultivo</Title>
-        <Container>
+        <Container img={img1}>
             <SvgContainer>
                 <DrawSvg />
             </SvgContainer>
