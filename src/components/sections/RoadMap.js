@@ -3,7 +3,13 @@ import styled from "styled-components";
 import DrawSvg from "../DrawSvg";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import img1 from '../../assets/strains/strainsSvg/b+Fondo 1.svg'
+import img1 from '../../assets/strains/strainsSvg/b+Fondo 1.svg';
+import granoColonizado from '../../assets/strains/granoColonizado.jpg';
+import vial from '../../assets/strains/viales.jpg';
+import granoEsteril from '../../assets/strains/granoEsteril.jpg';
+import granoInoculado from '../../assets/strains/granoInoculado.jpg';
+import sustrato from '../../assets/strains/sustrato.jpg';
+import cosecha from '../../assets/strains/cosecha.jpg';
 
 const Section = styled.section`
   display: flex;
@@ -205,62 +211,73 @@ const procesoCultivo = [
     {
         id:"1",
         title:"Viales o Micelio liquido",
-        subText:"Micelio liquido es la especie del hongo en crecimiento en un medio de cultivo liquido. (Mi medio liquido favorito es 2% malta y 2% maple del total de agua, todo ello esterilizado 20 minutos a 15psi.)"
+        subText:"Micelio liquido es la especie del hongo en crecimiento en un medio de cultivo liquido. (Mi medio liquido favorito es 2% malta y 2% maple del total de agua, todo ello esterilizado 20 minutos a 15psi.)",
+        img:vial
     },
     {
         id:"2",
         title:"Grano esteril",
-        subText:"El grano esteril no es mas que arroz u otro grano a medio coser para asi poder facilitar la colonizacion del hongo, todo esto en una bolsa de cultivo y esterilizada a olla a presion durante 90 minutos."
+        subText:"El grano esteril no es mas que arroz u otro grano a medio coser para asi poder facilitar la colonizacion del hongo, todo esto en una bolsa de cultivo y esterilizada a olla a presion durante 90 minutos.",
+        img:granoEsteril
     },
     {
         id:"3",
         title:"Grano inoculado",
-        subText:"El grano inoculado viene a ser el grano esteril inyectado con algun vial, todo esto realizando la tecnica de esterilizar la aguja por fuego y posteriormente pinchar la bolsa de cultivo e inmediatamente cerrar el orificio."
+        subText:"El grano inoculado viene a ser el grano esteril inyectado con algun vial, todo esto realizando la tecnica de esterilizar la aguja por fuego y posteriormente pinchar la bolsa de cultivo e inmediatamente cerrar el orificio.",
+        img:granoInoculado
     },
     {
         id:"4",
         title:"Grano colonizado",
-        subText:"Luego de tener grano inoculado podremos pasarlo a incubar en un lugar con optimas condiciones de temperatura entre 20°C y 27°C. Alrededor de los 14 dias aproximadamente tendremos grano completamente colonizado."
+        subText:"Luego de tener grano inoculado podremos pasarlo a incubar en un lugar con optimas condiciones de temperatura entre 20°C y 27°C. Alrededor de los 14 dias aproximadamente tendremos grano completamente colonizado.",
+        img:granoColonizado
     },
     {
         id:"5",
         title:"Sustrato",
-        subText:"El sustrato viene a contribuir en humedad y tambien en proporcionar los nutrientes necesarios que requiere el hongo. Mayormente se utiliza posta, vermiculita y fibra de coco. La proporcion se estima en base a la cantidad de grano colonizado, la proporcion correcta es de 1:2, lo que significa que por cada litro de grano colonizado que tengas necesitaras 2 litros de sustrato."
+        subText:"El sustrato viene a contribuir en humedad y tambien en proporcionar los nutrientes necesarios que requiere el hongo. Mayormente se utiliza posta, vermiculita y fibra de coco. La proporcion se estima en base a la cantidad de grano colonizado, la proporcion correcta es de 1:2, lo que significa que por cada litro de grano colonizado que tengas necesitaras 2 litros de sustrato.",
+        img:sustrato
     },
     {
         id:"6",
         title:"Sustrato pasteurizado",
-        subText:"Para pasteurizar el sustrato podremos realizarlo en ollas normales o en olla a presion. Para ello será necesario poner la mezcla de sustrato en una bolsa de cultivo o envuelta en una tela y ponerla a herbir bajo agua durante 1 hora y 30 minutos si es a olla normal y en olla a presion 40 minutos"
+        subText:"Para pasteurizar el sustrato podremos realizarlo en ollas normales o en olla a presion. Para ello será necesario poner la mezcla de sustrato en una bolsa de cultivo o envuelta en una tela y ponerla a herbir bajo agua durante 1 hora y 30 minutos si es a olla normal y en olla a presion 40 minutos",
+        img:sustrato
     },
     {
         id:"7",
-        title:"Bulk",
-        subText:"Para realizar el bulk necesitaremos de grano colonizado y sustrato pasteurizado, una vez tenemos el sustrato a temperatura ambiente podremos realizar la mezcla en un monotub(caja con agujeros). Utilizando como base una bolsa pondremos encima el sustrato y el grano colonizado y empezaremos a romper el bloque de micelio y asi mezclar homogeneamente con el sustrato."},
+        title:"Bulk - Desde aqui inicia tu Kit ",
+        subText:"Para realizar el bulk necesitaremos de grano colonizado y sustrato pasteurizado, una vez tenemos el sustrato a temperatura ambiente podremos realizar la mezcla en un monotub(caja con agujeros). Utilizando como base una bolsa pondremos encima el sustrato y el grano colonizado y empezaremos a romper el bloque de micelio y asi mezclar homogeneamente con el sustrato.",
+        img:granoColonizado
+    },
     {
         id:"8",
         title:"Pan de setas",
-        subText:"La mezcla realizada anteriormente se volvera en un pan de setas luego de permanecer en la caja cerrada durante 10 dias aproximadamente, una vez colonice todo el hongo, se podrá visualizar un pan de setas totalmente colonizado."
+        subText:"La mezcla realizada anteriormente se volvera en un pan de setas luego de permanecer en la caja cerrada durante 10 dias aproximadamente, una vez colonice todo el hongo, se podrá visualizar un pan de setas totalmente colonizado.",
+        img:granoColonizado
     },
     {
         id:"9",
         title:"Fructificacion",
-        subText:"La fructificacion del hongo se da cuando el pan de setas encuentra las condiciones optimas de humedad mayor al 90% y oxigeno. Para lo cual será necesario realizar ventilaciones diarias. Lo recomendable es realizar las ventilaciones en la mañana y noche."
+        subText:"La fructificacion del hongo se da cuando el pan de setas encuentra las condiciones optimas de humedad mayor al 90% y oxigeno. Para lo cual será necesario realizar ventilaciones diarias. Lo recomendable es realizar las ventilaciones en la mañana y noche.",
+        img:granoColonizado
     },
     {
         id:"10",
         title:"Primordios",
-        subText:"Al pasar 10 dias aproximadamente podras visualizar pequeñas bolitas que iran creciendo al pasar de los dias, estos pueden abortar y ponerse de color oscuro de no ventilar adecuadamente o no mantener la humedad al 90%."
+        subText:"Al pasar 10 dias aproximadamente podras visualizar pequeñas bolitas que iran creciendo al pasar de los dias, estos pueden abortar y ponerse de color oscuro de no ventilar adecuadamente o no mantener la humedad al 90%.",
+        img:granoColonizado
     },
     {
         id:"11",
         title:"Cosecha",
-        subText:"Podras cosechar tus hongos cuando rompan el velo o esten a punto de romper el velo. Lo mas ideal es cosechar antes de que esporulen, ya que podria manchar al pan de setas."
+        subText:"Podras cosechar tus hongos cuando rompan el velo o esten a punto de romper el velo. Lo mas ideal es cosechar antes de que esporulen, ya que podria manchar al pan de setas.",
+        img:cosecha
     },
 ]
 
 
-const RoadMapItem = ({title,subText, addToRef}) => {
-
+const RoadMapItem = ({title,subText, addToRef,img}) => {
     return (
         <Item ref={addToRef}>
             <ItemContainer>
@@ -269,7 +286,7 @@ const RoadMapItem = ({title,subText, addToRef}) => {
                     <Box>
                         <Text>{subText}</Text>
                     </Box>
-                    <img src={img1} alt="b+ leu"/>
+                    <img src={img} alt={title}/>
                 </LeafContainer>
 
             </ItemContainer>
@@ -328,7 +345,7 @@ const RoadMap = () => {
                 <Item>&nbsp;</Item>
                 {
                     procesoCultivo.map(process => (
-                        <RoadMapItem key={process.id} addToRef={addToRefs} title={process.title} subText={process.subText}/>
+                        <RoadMapItem key={process.id} addToRef={addToRefs} title={process.title} subText={process.subText} img={process.img}/>
                     ))
                 }
             </Items>
