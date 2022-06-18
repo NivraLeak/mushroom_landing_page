@@ -7,7 +7,7 @@ export const light = {
         carouselColor: "#454343",
 
     fontxs:'0.65em',
-    fontLef:'0.70em',
+    fontLef:'1.25em',
     fontsm:'0.875em',
     fontmd:'0.97em',
     fontxl:'1.7em',

@@ -287,9 +287,8 @@ const RoadMap = () => {
 
   return (
     <Section id="roadmap" img={img1}>
-      <Title> Mapa de cultivo</Title>
+      <Title> Ciclo de cultivo</Title>
         <Container img={img1}>
-
             <CardCircle array={procesoCultivo} firstRadio={44} secondRadio={35} firstCircleRadio={3} secondCircleRadio={9}/>
             {
                 /*

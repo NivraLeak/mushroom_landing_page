@@ -79,20 +79,18 @@ const SmallCircle = styled.div`
     font-family: sans-serif;
     border-radius: 50%;
     transition: all 0.2s ease;
-    
-      @media(max-width: 70em) {
-        font-size: ${props=> props.theme.fontsm};
-      }
-      @media(max-width: 40em) {
-        font-size: ${props=> props.theme.fontLef};
-      }
-      @media(max-width: 35em) {
-        font-size: ${props=> props.theme.fontxs};
-      }
+    @media(max-width: 70em) {
+      font-size: ${props=> props.theme.fontcard};
+    }
+    @media(max-width: 40em) {
+      font-size: ${props=> props.theme.fontLef};
+    }
+    @media(max-width: 35em) {
+      font-size: ${props=> props.theme.fontxs};
+    }
     &:hover{
       transform: scale(1.5);
       background-color: white;
-
     }
     
   }
@@ -131,6 +129,7 @@ const SecondCircleGraph= styled.div`
     width: calc(100% - 25px * 2);
     height: calc(100% - 25px * 2);
     border-radius: 50%;
+    
     @media(max-width: 70em) {
       border: 12px dotted darkslateblue;
       width: calc(100% - 15px * 2);
@@ -149,17 +148,17 @@ const SecondCircleGraph= styled.div`
   }
   
     @media(max-width: 70em) {
-    width: ${props=>props.radio/1.2}rem;
-    height: ${props=>props.radio/1.2 }rem;
-      }
-  @media(max-width: 40em) {
-    width: ${props=>props.radio/1.4 }rem;
-    height: ${props=>props.radio/1.4 }rem;
-  }
-  @media(max-width: 35em) {
-    width: ${props=>props.radio/2.2 }rem;
-    height: ${props=>props.radio/2.2 }rem;
-  }
+        width: ${props=>props.radio/1.2}rem;
+        height: ${props=>props.radio/1.2 }rem;  
+    }
+    @media(max-width: 40em) {
+        width: ${props=>props.radio/1.4 }rem;
+        height: ${props=>props.radio/1.4 }rem;
+    }
+    @media(max-width: 35em) {
+        width: ${props=>props.radio/2.2 }rem;
+        height: ${props=>props.radio/2.2 }rem;
+    }
 `
 
 const MediumCircle = styled.div`
@@ -175,48 +174,47 @@ const MediumCircle = styled.div`
   justify-content: center;
   display: flex;
   align-items: center;
-
-
-  img{
-    align-content: center;
-    width: ${props=>props.radio}rem;
-    height: ${props=>props.radio}rem;
-    object-fit: cover;
-    border-radius: 50%;
-    opacity: ${props=> props.idElement === props.selectId? 100:35}%;
-    border: gray dotted 1px;
-    transform: scale(${props=> props.idElement === props.selectId? 3.6:1 });
-    transition: all 1.7s ease;
-    margin-bottom: 0;
-      @media(max-width: 70em) {
-        width: ${props=>props.radio/1.2}rem;
-        height: ${props=>props.radio/1.2 }rem;
-      }
-      @media(max-width: 40em) {
-        width: ${props=>props.radio/1.45 }rem;
-        height: ${props=>props.radio/1.45 }rem;
-      }
-      @media(max-width: 35em) {
-        width: ${props=>props.radio/2.1 }rem;
-        height: ${props=>props.radio/2.1 }rem;
-      }
-  }
+  
   transition: all 0.7s ease;
-
-      @media(max-width: 70em) {
+  @media(max-width: 70em) {
         width: ${props=>props.radio/1.2}rem;
         height: ${props=>props.radio/1.2 }rem;
         margin: -62px -59px;
       }
-      @media(max-width: 40em) {
+  @media(max-width: 40em) {
         width: ${props=>props.radio/1.4 }rem;
         height: ${props=>props.radio/1.4 }rem;
         margin: -60px -55px;
       }
-      @media(max-width: 35em) {
+  @media(max-width: 35em) {
         width: ${props=>props.radio/2 }rem;
         height: ${props=>props.radio/2 }rem;
         margin: -32px -31px;
+      }
+  
+      img{
+        align-content: center;
+        width: ${props=>props.radio}rem;
+        height: ${props=>props.radio}rem;
+        object-fit: cover;
+        border-radius: 50%;
+        opacity: ${props=> props.idElement === props.selectId? 100:35}%;
+        border: gray dotted 1px;
+        transform: scale(${props=> props.idElement === props.selectId? 3.6:1 });
+        transition: all 1.7s ease;
+          @media(max-width: 70em) {
+            width: ${props=>props.radio/1.2}rem;
+            height: ${props=>props.radio/1.2 }rem;
+          }
+          @media(max-width: 40em) {
+            width: ${props=>props.radio/1.45 }rem;
+            height: ${props=>props.radio/1.45 }rem;
+          }
+          @media(max-width: 35em) {
+            width: ${props=>props.radio/2.45 }rem;
+            height: ${props=>props.radio/2.45 }rem;
+            margin-bottom: 10px;
+          }
       }
 `;
 
@@ -244,7 +242,7 @@ const CardCircle = ({firstRadio, secondRadio,secondCircleRadio,firstCircleRadio,
             MediumCircle.style.transform = `rotate(${angle}deg) translate(${MediumCirclegraph.clientWidth /
             2}px) rotate(-${angle}deg)`;
 
-            if (i == opacityDetect){
+            if (i.toString() === opacityDetect){
                 MediumCircle.style.transform = `translate(-${MediumCirclegraph.clientWidth /
                 100}px)`;
             }
@@ -267,7 +265,7 @@ const CardCircle = ({firstRadio, secondRadio,secondCircleRadio,firstCircleRadio,
         setActiveAnimation('paused');
     }
     return(
-        <Container>
+        <Container >
             <FirstCircleGraph ref={SmallGraph} radio={firstRadio} zIndex={10}>
                 {
                     array.map(element =>
