@@ -4,42 +4,39 @@ import React, {useLayoutEffect, useRef} from 'react';
 import styled, {keyframes} from "styled-components";
 import Vector from "../Icons/Vector";
 const VectorContainer = styled.div`
-position: absolute;
-  top: 0.5rem;
+  height: 90%;
+  width: 100%;
+  position: absolute;
   left: 50%;
   transform: translate(-50%);
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  
-  svg{
-    display: inline-block;
+  svg {
     width: 100%;
     height: 100%;
+    display: flex;
+    @media (max-width: 48em){
+    }
   }
   @media (max-width: 48em){
-    left: 1rem;
+    
   }
   
 `;
 const Bounce = keyframes`
- from{ transform: translate(-50%) scale(0.5); }
+ from{ transform: translate(-50%) scale(0.9); }
   to{ transform: translate(-50%) scale(1); }
-
-
 `
 const Ball = styled.div`
   position: absolute;
-  top: 0;
-  left: 50%;
+  top: -1%;
+  right: 12%;
   transform: translate(-50%);
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
-  background-color: ${props=>props.theme.text};
+  background-color: ${props=>props.theme.body};
   animation: ${Bounce} 0.5s linear infinite alternate;
   @media (max-width: 48em){
-    left: 1rem;
+    
   }
 `;
 
@@ -82,12 +79,10 @@ const DrawSvg = (props) =>{
             if(t1) t1.kill();
         };
     },[]);
-
-
     return(
         <>
-            <Ball ref={ballRef}/>
             <VectorContainer ref={ref}>
+                <Ball ref={ballRef}/>
                 <Vector />
             </VectorContainer>
         </>

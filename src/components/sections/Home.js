@@ -46,6 +46,8 @@ const rotate = keyframes`
   transform: rotate(1turn);
 }`
 
+
+
 const Round = styled.div`
   position: absolute;
   bottom: 2rem;

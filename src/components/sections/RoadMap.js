@@ -1,8 +1,10 @@
-import React, {useLayoutEffect, useRef} from 'react'
+import React, {useLayoutEffect, useRef} from 'react';
 import styled from "styled-components";
 import DrawSvg from "../DrawSvg";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+//Imagenes
 import img1 from '../../assets/strains/strainsSvg/b+Fondo 1.svg';
 import granoColonizado from '../../assets/strains/granoColonizado.jpg';
 import vial from '../../assets/strains/viales.jpg';
@@ -10,6 +12,8 @@ import granoEsteril from '../../assets/strains/granoEsteril.jpg';
 import granoInoculado from '../../assets/strains/granoInoculado.jpg';
 import sustrato from '../../assets/strains/sustrato.jpg';
 import cosecha from '../../assets/strains/cosecha.jpg';
+import BallLeaf from "../BallLeaf";
+import CardCircle from "../CardCircle";
 
 const Section = styled.section`
   display: flex;
@@ -31,37 +35,21 @@ const Title = styled.h2`
   }
 `
 const Container = styled.div`
-  min-height: 300vh;
-  width: 85%;
-  background-image: linear-gradient(
-          rgba(0.5, 0.2, 0.1, 0.25),
-          rgba(0.4, 0.1, 0.2, 0.5)
-  ), url("${props=> props.img}");
-  background-size: cover; 
-  background-position: center;
-  border-radius: 100px;
+  background-color: black;
+  border-radius: 50%;
   position: relative;
-  padding-top: 5rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  @media(max-width: 70em){
-    width: 100%;
-    border-radius: 70px;
-  }
-  @media(max-width: 48em) {
-    width: 100%;
-    border-radius: 50px;
-  }
-  @media(max-width: 30em) {
-    width: 100%;
-    border-radius: 50px;
-  }
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
 `;
 const SvgContainer = styled.div`
+  align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 `;
 const Items = styled.ul`
   list-style:none;
@@ -73,57 +61,29 @@ const Items = styled.ul`
   align-items: center;
   //background-color: lightblue;
   
-  &>*:nth-last-of-type(2n + 1){
-    justify-content: start;
-    @media(max-width: 48em) {
-      justify-content: center;
-    }
+  &>*:nth-last-of-type(n+1){
     
-    div{
-      border-radius: 40px;
-      text-align: right;
-      @media(max-width: 48em) {
-        border-radius: 40px;
-        text-align: left;
-        p{
-          border-radius: 30px;
-        }
-      }
-    }
-    p{
-      border-radius: 30px;
-
+  }
+  &>*:nth-last-of-type(2n + 1){
+    //justify-content: start;
+    @media(max-width: 48em) {
+      //justify-content: center;
     }
   }
   &>*:nth-last-of-type(2n){
-    justify-content: end;
     @media(max-width: 48em) {
-      justify-content: center;
     }
-  }
-  div{
-    border-radius: 30px;
-    text-align: left;
-    @media(max-width: 48em) {
-      border-radius: 40px;
-      text-align: left;
-      p{
-        border-radius: 30px;
-      }
-    }
-  }
-  p{
-    border-radius: 30px;
-    
   }
 `;
 const Item = styled.li`
   width: 100%;
   height: 100%;
   display: flex;
-
+  align-items: flex-end;
+  justify-content: flex-end;
+  transform: translateX(${props => props.idBall*-8}%);
   @media(max-width: 72em) {
-    justify-content: flex-end; !important;
+    //justify-content: flex-end; !important;
   }
 `;
 const ItemContainer = styled.div`
@@ -209,102 +169,95 @@ const LeafContainer = styled.div`
 
 const procesoCultivo = [
     {
+        id:"0",
+        title:"Micelio",
+        subText:"El micelio viene ser el conjunto de hifas o filamentes de un hongo, esto les permite colonizar y consumir el alimento colonizado.",
+        img:vial,
+        recipe: ""
+    },
+    {
         id:"1",
         title:"Viales o Micelio liquido",
-        subText:"Micelio liquido es la especie del hongo en crecimiento en un medio de cultivo liquido. (Mi medio liquido favorito es 2% malta y 2% maple del total de agua, todo ello esterilizado 20 minutos a 15psi.)",
-        img:vial
+        subText:"El micelio en un medio liquido nos ayuda a llevarlo a viales para posteriormente inyectar al grano esteril y asi podremos reproducir nuestra especie en grandes cantidad.",
+        img:vial,
+        recipe: "Mi medio liquido favorito es 2% malta y 2% maple del total de agua, todo ello esterilizado 20 minutos a 15psi"
     },
     {
         id:"2",
         title:"Grano esteril",
-        subText:"El grano esteril no es mas que arroz u otro grano a medio coser para asi poder facilitar la colonizacion del hongo, todo esto en una bolsa de cultivo y esterilizada a olla a presion durante 90 minutos.",
-        img:granoEsteril
+        subText:"Es el nutriente principal del micelio, las condiciones del grano deben ser a medio coser para ayudar a la colonizacion del hongo.",
+        img:granoEsteril,
+        recipe:"Mi grano favorito es el arroz integral cocido a 20 minutos luego del herbor del agua. Para la esterilizacion necesitaras de frascos de vidrio con orificios en la tapa para permitir el intercambio gaseoso, estos tapados con cinta micropore para posteriormente esterilizarlos 90 minutos a 15 psi."
     },
     {
         id:"3",
         title:"Grano inoculado",
-        subText:"El grano inoculado viene a ser el grano esteril inyectado con algun vial, todo esto realizando la tecnica de esterilizar la aguja por fuego y posteriormente pinchar la bolsa de cultivo e inmediatamente cerrar el orificio.",
-        img:granoInoculado
+        subText:"El grano inoculado viene a ser el grano esteril inyectado con algun vial de micelio liquido.",
+        img:granoInoculado,
+        recipe: "Para inocular es necesario un ambiente totalmente esteril, puedes utilizar una glovebox o una cabina de flujo laminar. Para realizar cualquier pinchazo con la aguja se deberá esterilizar previamente, puedes utilizar un mechero para dicho proceso."
     },
     {
         id:"4",
         title:"Grano colonizado",
-        subText:"Luego de tener grano inoculado podremos pasarlo a incubar en un lugar con optimas condiciones de temperatura entre 20°C y 27°C. Alrededor de los 14 dias aproximadamente tendremos grano completamente colonizado.",
-        img:granoColonizado
+        subText:"Es el grano inoculado totalmente colonizado por el micelio del hongo, desde aca podras iniciar la etapa del Bulk con facilidad.",
+        img:granoColonizado,
+        recipe: "Para tener una optima colonización se debe incubar en un lugar con optimas condiciones de temperatura entre 20°C y 27°C. Alrededor de los 14 dias aproximadamente tendremos grano completamente colonizado."
     },
     {
         id:"5",
         title:"Sustrato",
-        subText:"El sustrato viene a contribuir en humedad y tambien en proporcionar los nutrientes necesarios que requiere el hongo. Mayormente se utiliza posta, vermiculita y fibra de coco. La proporcion se estima en base a la cantidad de grano colonizado, la proporcion correcta es de 1:2, lo que significa que por cada litro de grano colonizado que tengas necesitaras 2 litros de sustrato.",
-        img:sustrato
+        subText:"El sustrato viene a contribuir en humedad y tambien en proporcionar los nutrientes necesarios que requiere el hongo.",
+        img:sustrato,
+        recipe: "Mayormente se utiliza posta, vermiculita y fibra de coco. La proporcion se estima en base a la cantidad de grano colonizado, la proporcion correcta es de 1:2, lo que significa que por cada litro de grano colonizado que tengas necesitaras 2 litros de sustrato."
     },
     {
         id:"6",
         title:"Sustrato pasteurizado",
-        subText:"Para pasteurizar el sustrato podremos realizarlo en ollas normales o en olla a presion. Para ello será necesario poner la mezcla de sustrato en una bolsa de cultivo o envuelta en una tela y ponerla a herbir bajo agua durante 1 hora y 30 minutos si es a olla normal y en olla a presion 40 minutos",
-        img:sustrato
+        subText:"Es la mezcla de sustrato que pasa por un proceso termico para reducir el porcentaje de bacterias y mantener los nutrientes.",
+        img:sustrato,
+        recipe: "Para pasteurizar el sustrato podremos realizarlo en ollas normales o en olla a presion. Para ello será necesario poner la mezcla de sustrato en una bolsa de cultivo o envuelta en una tela y ponerla a herbir bajo agua durante 1 hora y 30 minutos si es a olla normal y en olla a presion 40 minutos\""
     },
     {
         id:"7",
         title:"Bulk - Desde aqui inicia tu Kit ",
-        subText:"Para realizar el bulk necesitaremos de grano colonizado y sustrato pasteurizado, una vez tenemos el sustrato a temperatura ambiente podremos realizar la mezcla en un monotub(caja con agujeros). Utilizando como base una bolsa pondremos encima el sustrato y el grano colonizado y empezaremos a romper el bloque de micelio y asi mezclar homogeneamente con el sustrato.",
-        img:granoColonizado
+        subText:"Proceso en el cual mezclas tu sustrato y grano colonizado. En esta etapa realizaras un pan de setas.",
+        img:granoColonizado,
+        recipe: "Para realizar el bulk necesitaremos de grano colonizado y sustrato pasteurizado, una vez tenemos el sustrato a temperatura ambiente podremos realizar la mezcla en un monotub(caja con agujeros). Utilizando como base una bolsa pondremos encima el sustrato y el grano colonizado y empezaremos a romper el bloque de micelio y asi mezclar homogeneamente con el sustrato."
     },
     {
         id:"8",
         title:"Pan de setas",
-        subText:"La mezcla realizada anteriormente se volvera en un pan de setas luego de permanecer en la caja cerrada durante 10 dias aproximadamente, una vez colonice todo el hongo, se podrá visualizar un pan de setas totalmente colonizado.",
-        img:granoColonizado
+        subText:"Luego del bulk aproximadamente en 10 dias tendras un pan de setas totalmente colonizado.",
+        img:granoColonizado,
+        recipe: "Para realizar tu pan de setas puedes utilizar distintas proporciones de grano, esto puede verse en la cantidad de tiempo que tomará si usas poco grano."
     },
     {
         id:"9",
         title:"Fructificacion",
-        subText:"La fructificacion del hongo se da cuando el pan de setas encuentra las condiciones optimas de humedad mayor al 90% y oxigeno. Para lo cual será necesario realizar ventilaciones diarias. Lo recomendable es realizar las ventilaciones en la mañana y noche.",
-        img:granoColonizado
+        subText:"En esta etapa el hongo dará sus frutos dependiendo de los parametros ambientales y cepa.",
+        img:granoColonizado,
+        recipe: "La fructificacion del hongo se da cuando el pan de setas encuentra las condiciones optimas de humedad mayor al 90% y oxigeno. Para lo cual será necesario realizar ventilaciones diarias. Lo recomendable es realizar las ventilaciones en la mañana y noche."
     },
     {
         id:"10",
         title:"Primordios",
-        subText:"Al pasar 10 dias aproximadamente podras visualizar pequeñas bolitas que iran creciendo al pasar de los dias, estos pueden abortar y ponerse de color oscuro de no ventilar adecuadamente o no mantener la humedad al 90%.",
-        img:granoColonizado
+        subText:"Los primordios aparecen como pequeñas bolitas blancas y luego terminan siendo un mini - honguito que ira creciendo.",
+        recipe: "Al pasar 10 dias aproximadamente podras visualizar pequeñas bolitas que iran creciendo al pasar de los dias, estos pueden abortar y ponerse de color oscuro de no ventilar adecuadamente o no mantener la humedad al 90%.",
+        img:granoColonizado,
     },
     {
         id:"11",
         title:"Cosecha",
-        subText:"Podras cosechar tus hongos cuando rompan el velo o esten a punto de romper el velo. Lo mas ideal es cosechar antes de que esporulen, ya que podria manchar al pan de setas.",
-        img:cosecha
+        subText:"Una vez los primordios hallan conseguido suficiente tamaño podras cosecharlos.",
+        img:cosecha,
+        recipe: "Podras cosechar tus hongos cuando rompan el velo o esten a punto de romper el velo. Lo mas ideal es cosechar antes de que esporulen, ya que podria manchar al pan de setas."
     },
 ]
-
-
-const RoadMapItem = ({title,subText, addToRef,img}) => {
-    return (
-        <Item ref={addToRef}>
-            <ItemContainer>
-                <SubTitle>{title}</SubTitle>
-                <LeafContainer>
-                    <Box>
-                        <Text>{subText}</Text>
-                    </Box>
-                    <img src={img} alt={title}/>
-                </LeafContainer>
-
-            </ItemContainer>
-        </Item>
-    )
-}
-
 
 const RoadMap = () => {
     const revealRefs = useRef([]);
     revealRefs.current = [];
     gsap.registerPlugin(ScrollTrigger);
-
-    const addToRefs = (el) => {
-        if(el && !revealRefs.current.includes(el)){
-            revealRefs.current.push(el)
-        }
-    }
 
     useLayoutEffect(()=>{
         let t1 = gsap.timeline();
@@ -318,7 +271,7 @@ const RoadMap = () => {
                     scrollTrigger:{
                         id: `section.${index + 1}`,
                         trigger:el,
-                        start:'top center+=50px',
+                        start:'top center+=200px',
                         end:'bottom center',
                         scrub:true,
                         //markers:true,
@@ -327,8 +280,6 @@ const RoadMap = () => {
             )
 
         })
-
-
         return () =>{
 
         }
@@ -338,17 +289,15 @@ const RoadMap = () => {
     <Section id="roadmap" img={img1}>
       <Title> Mapa de cultivo</Title>
         <Container img={img1}>
-            <SvgContainer>
-                <DrawSvg />
-            </SvgContainer>
-            <Items>
-                <Item>&nbsp;</Item>
-                {
-                    procesoCultivo.map(process => (
-                        <RoadMapItem key={process.id} addToRef={addToRefs} title={process.title} subText={process.subText} img={process.img}/>
-                    ))
-                }
-            </Items>
+
+            <CardCircle array={procesoCultivo} firstRadio={44} secondRadio={35} firstCircleRadio={3} secondCircleRadio={9}/>
+            {
+                /*
+                    <SvgContainer>
+                        <DrawSvg/>
+                    </SvgContainer>
+                * */
+            }
         </Container>
     </Section>
   )
