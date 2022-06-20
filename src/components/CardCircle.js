@@ -51,8 +51,8 @@ const FirstCircleGraph= styled.div`
     height: ${props=>props.radio/1.4 }rem;
   }
   @media(max-width: 35em) {
-    width: ${props=>props.radio/2.3 }rem;
-    height: ${props=>props.radio/2.3 }rem;
+    width: ${props=>props.radio/2.375 }rem;
+    height: ${props=>props.radio/2.375 }rem;
   }
   
 `
@@ -64,11 +64,11 @@ const SmallCircle = styled.div`
   width: ${props=>props.radio}rem;
   height: ${props=>props.radio}rem;
   margin: calc(-50px / 2);
-  background: white;
+  background-color: ${props => props.theme.body};
   border-radius: 50%;
 
   text-align: center;
-  color: black;
+  color: ${props => props.theme.text};
   align-content: center;
   justify-content: center;
 
@@ -90,7 +90,7 @@ const SmallCircle = styled.div`
     }
     &:hover{
       transform: scale(1.5);
-      background-color: white;
+      background-color: 'rgba(${props=> props.theme.textRgba},0.5)';
     }
     
   }
@@ -123,7 +123,7 @@ const SecondCircleGraph= styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    border: 15px dotted gray;
+
     animation: ${rotate} 30s linear infinite reverse;
     animation-play-state: ${props=>props.activeAnimation};
     width: calc(100% - 25px * 2);
@@ -131,17 +131,16 @@ const SecondCircleGraph= styled.div`
     border-radius: 50%;
     
     @media(max-width: 70em) {
-      border: 12px dotted darkslateblue;
       width: calc(100% - 15px * 2);
       height: calc(100% - 15px * 2);
     }
     @media(max-width: 40em) {
-      border: 10px dotted darkslateblue;
+
       width: calc(100% - 20px * 2);
       height: calc(100% - 20px * 2);
     }
     @media(max-width: 35em) {
-      border: 7px dotted darkslateblue;
+
       width: calc(100% - 5px * 2);
       height: calc(100% - 5px * 2);
     }
@@ -191,15 +190,17 @@ const MediumCircle = styled.div`
         height: ${props=>props.radio/2 }rem;
         margin: -32px -31px;
       }
-  
+
       img{
         align-content: center;
         width: ${props=>props.radio}rem;
         height: ${props=>props.radio}rem;
         object-fit: cover;
         border-radius: 50%;
-        opacity: ${props=> props.idElement === props.selectId? 100:35}%;
-        border: gray dotted 1px;
+
+        opacity: ${props=> props.idElement === props.selectId? 100:50}%;
+        box-shadow: -0.1em 0.1em .3em ${props=>props.theme.text};
+        filter: blur(${props=> props.idElement === props.selectId? 0:2}px);
         transform: scale(${props=> props.idElement === props.selectId? 3.6:1 });
         transition: all 1.7s ease;
           @media(max-width: 70em) {

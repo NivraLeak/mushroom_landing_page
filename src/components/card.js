@@ -4,18 +4,20 @@ import ReactStars from "react-stars/dist/react-stars";
 
 const ImgContainer = styled.div`
   width: 15rem;
+  padding: 1rem;
   margin: 0 1rem;
   border-radius: 20px;
   cursor: pointer;
   align-items: center;
   justify-content: center;
   display: inline-grid;
-  
+
   img{
     width: 15rem;
     height: 15rem;
     object-fit: cover;
-    border-radius: 15%;
+    border-radius: 20px;
+    box-shadow: -0.3em 0.3em .6em ${props=>props.theme.text};
     
     @media(max-width: 80em) {
       width: 12rem;

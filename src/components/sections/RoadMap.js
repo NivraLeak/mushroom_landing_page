@@ -12,7 +12,7 @@ import granoEsteril from '../../assets/strains/granoEsteril.jpg';
 import granoInoculado from '../../assets/strains/granoInoculado.jpg';
 import sustrato from '../../assets/strains/sustrato.jpg';
 import cosecha from '../../assets/strains/cosecha.jpg';
-import BallLeaf from "../BallLeaf";
+
 import CardCircle from "../CardCircle";
 
 const Section = styled.section`
@@ -22,6 +22,7 @@ const Section = styled.section`
   align-items: center;
   flex-direction: column;
   padding: 1rem;
+  background-color: ${props => props.theme.body};
 `;
 const Title = styled.h2`
   font-size: ${props=> props.theme.fontxxl};
@@ -35,15 +36,13 @@ const Title = styled.h2`
   }
 `
 const Container = styled.div`
-  background-color: black;
+  background-color: ${props => props.theme.text};
   border-radius: 50%;
   position: relative;
   
   display: flex;
   align-items: center;
   justify-content: center;
-  
-
 `;
 const SvgContainer = styled.div`
   align-self: center;
@@ -51,62 +50,7 @@ const SvgContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const Items = styled.ul`
-  list-style:none;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  //background-color: lightblue;
-  
-  &>*:nth-last-of-type(n+1){
-    
-  }
-  &>*:nth-last-of-type(2n + 1){
-    //justify-content: start;
-    @media(max-width: 48em) {
-      //justify-content: center;
-    }
-  }
-  &>*:nth-last-of-type(2n){
-    @media(max-width: 48em) {
-    }
-  }
-`;
-const Item = styled.li`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  transform: translateX(${props => props.idBall*-8}%);
-  @media(max-width: 72em) {
-    //justify-content: flex-end; !important;
-  }
-`;
-const ItemContainer = styled.div`
-  width: 40%;
-  margin-top: 1rem;
-  height: fit-content;
-  padding: 0.5rem;
-  box-shadow: 0 0 15px 1px ${props=>props.theme.body};
-  //border: 2.5px solid ${props=>props.theme.text};
-  backdrop-filter: blur(5px);
-  @media(max-width: 48em) {
-    width: 70%;
-  }
-`;
-const Box = styled.p`
-  height: fit-content;
-  //background-color: ${props => props.theme.carouselColor};
 
-  color: ${props=>props.theme.body};
-  padding: 0 0 0 0.7rem;
-  position: relative;
-  //border: 1px solid ${props=>props.theme.text};
-`;
 const SubTitle=styled.span`
   display: block;
   font-size: ${props => props.theme.fontxl};
@@ -137,33 +81,6 @@ const Text=styled.span`
   }
   @media(max-width: 30em) {
     font-size: ${props=>props.theme.fontxs};
-  }
-`
-const LeafContainer = styled.div`
-  width: auto;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-
-  img{
-    width: auto;
-    height: 13rem;
-    object-fit: cover;
-    border-radius: 30px ;
-    margin-left: 0.2rem;
-    @media(max-width: 70em) {
-      width: auto;
-      height: 10.5rem;
-    }
-    @media(max-width: 48em) {
-      width: auto;
-      height: 10rem;
-    }
-    @media(max-width: 30em) {
-      width: auto;
-      height: 9rem;
-    }
   }
 `
 

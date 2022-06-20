@@ -47,7 +47,8 @@ const Container = styled.div`
   .swiper-slide{
     background-color: ${props=>props.theme.carouselColor};
     border-radius: 20px;
-    
+    border: 0.5px solid ${props=>props.theme.body};
+    box-shadow: -0.4em 0.4em .6em ${props=>props.theme.text};
     display: flex;
     justify-content: center;
     align-items: center;

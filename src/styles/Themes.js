@@ -1,11 +1,12 @@
 export const light = {
-    body:"#fff",
-    text:"#202020",
+    body:"#c0b5ec",
+    text:"#181e3b",
+    carouselColor: "#434980",
+
     bodyRgba:"255,255,255",
     textRgba:"32,32,32",
 
-        carouselColor: "#454343",
-
+    fontxss:'0.55em',
     fontxs:'0.65em',
     fontLef:'1.25em',
     fontsm:'0.875em',
@@ -22,12 +23,11 @@ export const light = {
 }
 
 export const dark = {
-    body:"#202020",
-    text:"#fff",
+    body:"#181e3b",
+    text:"#c0b5ec",
+    carouselColor: "#434980",
     bodyRgba:"32,32,32",
     textRgba:"255,255,255",
-
-    carouselColor: "#EEEDDE",
 
     fontxs:'0.75em',
     fontsm:'0.875em',
