@@ -64,35 +64,48 @@ const SmallCircle = styled.div`
   width: ${props=>props.radio}rem;
   height: ${props=>props.radio}rem;
   margin: calc(-50px / 2);
-  background-color: ${props => props.theme.body};
-  border-radius: 50%;
+  background-color: ${props => props.theme.text};
 
+  border: 0.5px solid ${props => props.theme.body};
+  border-radius: 50%;
   text-align: center;
-  color: ${props => props.theme.text};
+  color: ${props => props.theme.body};
   align-content: center;
   justify-content: center;
 
   h1{
     margin: 5px;
     text-align: center;
-    font-weight: 450;
+    font-weight: bold;
     font-family: sans-serif;
     border-radius: 50%;
     transition: all 0.2s ease;
-    @media(max-width: 70em) {
-      font-size: ${props=> props.theme.fontcard};
+    &::after{
+      content: ' ';
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      border: 1px solid ${props=>props.theme.body};
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      transition: all 0.2s ease;
     }
-    @media(max-width: 40em) {
-      font-size: ${props=> props.theme.fontLef};
-    }
-    @media(max-width: 35em) {
-      font-size: ${props=> props.theme.fontxs};
-    }
-    &:hover{
-      transform: scale(1.5);
-      background-color: 'rgba(${props=> props.theme.textRgba},0.5)';
+    &:hover::after{
+      transform: translate(-50%,-50%) scale(1);
+      padding: 0.5rem;
     }
     
+      @media(max-width: 70em) {
+        font-size: ${props=>props.theme.fontcard};
+      }
+      @media(max-width: 40em) {
+        font-size: ${props=>props.theme.fontLef};
+      }
+      @media(max-width: 35em) {
+        font-size: ${props=>props.theme.fontxs};
+      }
   }
       @media(max-width: 70em) {
         width: ${props=>props.radio/1.2}rem;
@@ -109,7 +122,7 @@ const SmallCircle = styled.div`
         height: ${props=>props.radio/2.3 }rem;
         margin: calc(-150px / 15);
       }
-  
+
 
 `;
 

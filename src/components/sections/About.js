@@ -75,7 +75,7 @@ const Title = styled.h2`
 
 const SubText = styled.p`
   font-size: ${props=> props.theme.fontlg};
-  color: ${props=>props.theme.body};
+  color: ${props => `rgba(${props.theme.bodyRgba},0.75)`};
   align-self:flex-start;
   width: 80%;
   margin: 1rem auto;

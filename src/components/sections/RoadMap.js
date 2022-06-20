@@ -43,6 +43,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  padding: 1rem;
 `;
 const SvgContainer = styled.div`
   align-self: center;

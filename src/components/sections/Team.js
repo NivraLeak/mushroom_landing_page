@@ -14,9 +14,14 @@ import ConfettiComponent from "../Confetti";
 
 const Section = styled.section`
   min-height: 100vh;
-  width: 100vw;
   background-color: ${props=>props.theme.body};
   position: relative;
+
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 

@@ -71,7 +71,7 @@ const ImgContainer = styled.div`
   
   img{
     block-size: fit-content;
-    border: 1px solid ${props=>`rgba(${props.theme.bodyRgba},0.5)`};
+    border: 1px solid ${props=>`rgba(${props.theme.bodyRgba},0.4)`};
     border-radius: 20px 20px 0 0;
     width: 99%;
     height: 65.5%;
@@ -83,10 +83,11 @@ const Details = styled.div`
   justify-content: space-between;
   padding: 0.5rem 1rem;
   background-color: ${props => props.theme.text};
-  border: 3px solid ${props => `rgba(${props.theme.bodyRgba},0.5)`};
+  border: 3px solid ${props=>`rgba(${props.theme.bodyRgba},0.4)`};
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-
+  font-family: 'Akaya Telivigala', cursive;
+    
   span {
     font-size: ${props => props.theme.fontsm};
     color: ${props => `rgba(${props.theme.bodyRgba},0.5)`};

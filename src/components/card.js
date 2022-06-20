@@ -47,10 +47,11 @@ const CharStart = styled.div`
   h1{
     font-family: 'Akaya Telivigala', cursive;
     font-size:  ${props=>props.theme.fontmd};
-    color: ${props=>`rgba(${props.theme.bodyRgba},0.75)`};
+    color: ${props=>props.theme.body};
     font-weight: 550;
     padding: 0.2rem;
     text-align: left;
+    text-shadow: -0.3em 0.3em .5em ${props=>props.theme.text};
     @media(max-width: 48em) {
       font-size: ${props=>props.theme.fontxs};
     }
@@ -63,6 +64,7 @@ const Name = styled.h1`
   padding: 0.5rem;
   font-family: 'Akaya Telivigala', cursive;
   text-align: center;
+  text-shadow: -0.4em 0.4em .4em ${props=>props.theme.text};
   @media(max-width: 48em) {
     font-size: ${props=>props.theme.fontxs};
   }
@@ -78,7 +80,8 @@ const Card = ({img,name,visuales,produccion,sensitivo,dificultad}) => {
                         <ReactStars
                             count={5}
                             size={15}
-                            color2={'#ffffff'}
+                            color2={"#b8aaeb"}
+                            color1={"rgba(123,127,208,0.5)"}
                             value={visuales}
                             edit={false}
                         />
@@ -88,7 +91,8 @@ const Card = ({img,name,visuales,produccion,sensitivo,dificultad}) => {
                         <ReactStars
                             count={5}
                             size={15}
-v                            color2={'#ffffff'}
+                            color2={"#b8aaeb"}
+                            color1={"rgba(123,127,208,0.5)"}
                             value={produccion}
                             edit={false}
                         />
@@ -98,7 +102,8 @@ v                            color2={'#ffffff'}
                         <ReactStars
                             count={5}
                             size={15}
-                            color2={'#ffffff'}
+                            color2={"#b8aaeb"}
+                            color1={"rgba(123,127,208,0.5)"}
                             value={sensitivo}
                             edit={false}
                         />
@@ -108,7 +113,8 @@ v                            color2={'#ffffff'}
                         <ReactStars
                             count={5}
                             size={15}
-                            color2={'#ffffff'}
+                            color2={"#b8aaeb"}
+                            color1={"rgba(123,127,208,0.5)"}
                             value={dificultad}
                             edit={false}
                         />

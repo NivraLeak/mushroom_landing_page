@@ -1,10 +1,10 @@
 export const light = {
     body:"#c0b5ec",
     text:"#181e3b",
-    carouselColor: "#434980",
+    carouselColor: "#484e80",
 
-    bodyRgba:"255,255,255",
-    textRgba:"32,32,32",
+    bodyRgba:"192,181,236",
+    textRgba:"24,30,59",
 
     fontxss:'0.55em',
     fontxs:'0.65em',
