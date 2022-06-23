@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mushroom_landing_page/static/css/main.f50318aa.css",
-    "main.js": "/mushroom_landing_page/static/js/main.f398b248.js",
+    "main.js": "/mushroom_landing_page/static/js/main.a25f5948.js",
     "static/media/enigma 1.svg": "/mushroom_landing_page/static/media/enigma 1.af49acde20332cd0f55d0b8f5e2fb5e7.svg",
     "static/media/melek 1.svg": "/mushroom_landing_page/static/media/melek 1.e57ae911e67c128262f89837856b928c.svg",
     "static/media/gandalfHomeVideo.mp4": "/mushroom_landing_page/static/media/gandalfHomeVideo.a2e4136cdfa56ccbfe07.mp4",
@@ -35,10 +35,10 @@
     "static/media/Arrow.svg": "/mushroom_landing_page/static/media/Arrow.2aa046cef6c722596b055a335b4a9792.svg",
     "index.html": "/mushroom_landing_page/index.html",
     "main.f50318aa.css.map": "/mushroom_landing_page/static/css/main.f50318aa.css.map",
-    "main.f398b248.js.map": "/mushroom_landing_page/static/js/main.f398b248.js.map"
+    "main.a25f5948.js.map": "/mushroom_landing_page/static/js/main.a25f5948.js.map"
   },
   "entrypoints": [
     "static/css/main.f50318aa.css",
-    "static/js/main.f398b248.js"
+    "static/js/main.a25f5948.js"
   ]
 }
