@@ -6,7 +6,8 @@ export const light = {
     bodyRgba:"192,181,236",
     textRgba:"24,30,59",
 
-    fontxss:'0.55em',
+    fontxsSS:'0.4em',
+    fontxsS:'0.4em',
     fontxs:'0.65em',
     fontLef:'1.25em',
     fontsm:'0.875em',

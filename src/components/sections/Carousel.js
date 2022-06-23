@@ -21,7 +21,7 @@ import Card from "../card";
 const Container = styled.div`
   width: 21vw;
   height: 70vh;
-
+  
   @media (max-width: 70em){
     height: 60vh;
   }

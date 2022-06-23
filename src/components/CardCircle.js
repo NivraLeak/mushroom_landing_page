@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styled, {keyframes} from "styled-components";
+import CarouselMap from "./CarouselMap";
 
 const rotate = keyframes`
   100%{
@@ -32,7 +33,6 @@ const FirstCircleGraph= styled.div`
   position: absolute;
   width: ${props=>props.radio}rem;
   height: ${props=>props.radio}rem;
-  z-index: ${props=> props.zIndex};
   :before{
     content: "";
     position: absolute;
@@ -57,7 +57,8 @@ const FirstCircleGraph= styled.div`
   
 `
 
-const SmallCircle = styled.div`
+const SmallCircle = styled.div` 
+  z-index: ${props=> props.zIndex};
   position: absolute;
   top: 50%;
   left: 50%;
@@ -66,18 +67,21 @@ const SmallCircle = styled.div`
   margin: calc(-50px / 2);
   background-color: ${props => props.theme.text};
 
-  border: 0.5px solid ${props => props.theme.body};
+  box-shadow: -1px 1px  .5em ${props=>props.theme.body};
   border-radius: 50%;
-  text-align: center;
+
   color: ${props => props.theme.body};
+  
+  display: flex;
   align-content: center;
   justify-content: center;
-
+  align-items: center;
+  
   h1{
-    margin: 5px;
+    font-size: ${props=>props.theme.fontxl};
     text-align: center;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: 'Akaya Telivigala', cursive;
     border-radius: 50%;
     transition: all 0.2s ease;
     &::after{
@@ -86,7 +90,7 @@ const SmallCircle = styled.div`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(0);
-      border: 1px solid ${props=>props.theme.body};
+      box-shadow: -1px 1px  .5em ${props=>props.theme.body};
       width: 100%;
       height: 100%;
       border-radius: 50px;
@@ -134,9 +138,10 @@ const SecondCircleGraph= styled.div`
   :before {
     content: "";
     position: absolute;
+    
     top: 0;
     left: 0;
-
+    
     animation: ${rotate} 30s linear infinite reverse;
     animation-play-state: ${props=>props.activeAnimation};
     width: calc(100% - 25px * 2);
@@ -184,9 +189,8 @@ const MediumCircle = styled.div`
   z-index: ${props=> props.idElement === props.selectId? 9:8};
   align-content: center;
   justify-content: center;
-  display: flex;
   align-items: center;
-  
+
   transition: all 0.7s ease;
   @media(max-width: 70em) {
         width: ${props=>props.radio/1.2}rem;
@@ -232,12 +236,14 @@ const MediumCircle = styled.div`
       }
 `;
 
+
 const CardCircle = ({firstRadio, secondRadio,secondCircleRadio,firstCircleRadio, array}) => {
     const [opacityDetect, setOpacityDetect] = useState(0);
     const [radioCircleDetect, setRadioCircleDetect] = useState(0);
-    const [activeAnimation,setActiveAnimation] = useState('paused');
+
     const SmallGraph = useRef(null);
     const MediumGraph = useRef(null);
+
     useEffect(() => {
         const SmallCirclegraph = SmallGraph.current;
         const MediumCirclegraph = MediumGraph.current;
@@ -259,7 +265,14 @@ const CardCircle = ({firstRadio, secondRadio,secondCircleRadio,firstCircleRadio,
             if (i.toString() === opacityDetect){
                 MediumCircle.style.transform = `translate(-${MediumCirclegraph.clientWidth /
                 100}px)`;
+                MediumCircle.childNodes[0].style.transform =  'scale(3.6)';
+                console.log(MediumCircle.childNodes[0].childNodes[0].childNodes[4].childNodes[1].childNodes[1]);
+                MediumCircle.childNodes[0].childNodes[0].childNodes[4].childNodes[1].childNodes[1].style.fontSize= '10px';
+            }else {
+                MediumCircle.childNodes[0].style.transform =  'scale(1)';
             }
+
+
         }
     }, [opacityDetect]);
 
@@ -268,30 +281,27 @@ const CardCircle = ({firstRadio, secondRadio,secondCircleRadio,firstCircleRadio,
         setOpacityDetect(element.id);
     }
     let play = (e,element) =>{
-        setActiveAnimation('running');
         changeBackground(e,element);
         let angle = ((360/12)*element.id)+ 30;
 
         setRadioCircleDetect(angle)
-        console.log("Angle: ",angle)
     }
     let pause = (e) =>{
-        setActiveAnimation('paused');
     }
     return(
         <Container >
-            <FirstCircleGraph ref={SmallGraph} radio={firstRadio} zIndex={10}>
+            <FirstCircleGraph ref={SmallGraph} radio={firstRadio} >
                 {
                     array.map(element =>
-                        <SmallCircle key={element.id} onMouseOver={(e) => play(e,element)} onMouseOut={(e)=> pause(e)} radio={firstCircleRadio}><h1>{element.id}</h1></SmallCircle>
+                        <SmallCircle zIndex={10}  key={element.id} onMouseOver={(e) => play(e,element)} onMouseOut={(e)=> pause(e)} radio={firstCircleRadio}><h1>{element.id}</h1></SmallCircle>
                     )
                 }
             </FirstCircleGraph>
-            <SecondCircleGraph selectId={opacityDetect} activeAnimation={activeAnimation} ref={MediumGraph} radio={secondRadio} zIndex={9} >
+            <SecondCircleGraph selectId={opacityDetect} ref={MediumGraph} radio={secondRadio}>
                 {
                     array.map(element =>
-                        <MediumCircle img={element.img} key={element.id} radio={secondCircleRadio} idElement={element.id} selectId={opacityDetect} radioCircleDetect={radioCircleDetect}>
-                            <img src={element.img} alt={element.title} />
+                        <MediumCircle  key={element.id} radio={secondCircleRadio} idElement={element.id} selectId={opacityDetect} radioCircleDetect={radioCircleDetect}>
+                            <CarouselMap opacityDetect={opacityDetect} radioImg={secondCircleRadio} id={element.id} title={element.title} subText={element.subText} text={element.recipe} img={element.img}/>
                         </MediumCircle>
                     )
                 }
