@@ -25,7 +25,7 @@ const VideoContainer = styled.div`
     }
 
   @media (max-width: 64em) {
-   min-width: 45vh;
+   min-width: 40vh;
     height: auto;
     border-radius: 55px;
   }

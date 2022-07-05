@@ -8,6 +8,7 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 import img1 from '../../assets/strains/strainsSvg/b+Fondo 1.svg';
 import granoColonizado from '../../assets/strains/granoColonizado.jpg';
 import vial from '../../assets/strains/viales.jpg';
+import micelio from '../../assets/strains/Micelium.jpg'
 import granoEsteril from '../../assets/strains/granoEsteril.jpg';
 import granoInoculado from '../../assets/strains/granoInoculado.jpg';
 import sustrato from '../../assets/strains/sustrato.jpg';
@@ -91,7 +92,7 @@ const procesoCultivo = [
         id:"0",
         title:"Micelio",
         subText:"El micelio viene ser el conjunto de hifas o filamentes de un hongo, esto les permite colonizar y consumir el alimento colonizado.",
-        img:vial,
+        img:micelio,
         recipe: ""
     },
     {
@@ -216,9 +217,6 @@ const RoadMap = () => {
                     </SvgContainer>
                 * */
             }
-            <SvgContainer>
-                <DrawSvg/>
-            </SvgContainer>
         </Container>
     </Section>
   )

@@ -10,7 +10,7 @@ const ImgContainer = styled.div`
   align-items: center;
   justify-content: center;
   display: inline-grid;
-
+  
   img{
     width: 15rem;
     height: 15rem;
@@ -25,11 +25,8 @@ const ImgContainer = styled.div`
       width: 11rem;
       height: 11rem;
     }
-    @media(max-width: 30em) {
-      width: 10rem;
-      height: 10rem;
-    }
   }
+  
 `;
 const CharStart = styled.div`
   display: flex;              
@@ -67,6 +64,16 @@ const ImageNameContainer = styled.div`
   display: flex;
   
   box-shadow: -0.45em 0.35em .6em ${props=>props.theme.text};
+
+  @media(max-width: 80em) {
+    width: 12rem;
+    height: 12rem;
+  }
+  @media(max-width: 48em) {
+    width: 11rem;
+    height: 11rem;
+  }
+  
 `;
 
 const Name = styled.h1`

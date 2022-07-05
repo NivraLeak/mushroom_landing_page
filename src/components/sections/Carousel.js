@@ -41,8 +41,8 @@ const Container = styled.div`
   }
   
   .swiper{
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 90%;
   }
   .swiper-slide{
     background-color: ${props=>props.theme.carouselColor};
