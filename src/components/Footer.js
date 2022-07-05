@@ -6,9 +6,8 @@ import Facebook from "../Icons/Facebook";
 import Instagram from "../Icons/Instagram";
 
 const Section = styled.section`
-  min-height: 100vh;
-  height: 100vh;
   width: 100vw;
+  min-height: 60vh;
   background-color: ${props=>props.theme.body};
   position: relative;
   color: ${props => props.theme.text};
@@ -132,21 +131,21 @@ const Footer = () => {
             </Left>
             <MenuItems>
                 <MenuItem onClick={()=> scrollTo('home')}>Home</MenuItem>
-                <MenuItem onClick={()=> scrollTo('about')}>About</MenuItem>
-                <MenuItem onClick={()=> scrollTo('roadmap')}>RoadMap</MenuItem>
-                <MenuItem onClick={()=> scrollTo('showcase')}>Showcase</MenuItem>
-                <MenuItem onClick={()=> scrollTo('team')}>Team</MenuItem>
-                <MenuItem onClick={()=> scrollTo('faq')}>Faq</MenuItem>
+                <MenuItem onClick={()=> scrollTo('about')}>¿Qué es?</MenuItem>
+                <MenuItem onClick={()=> scrollTo('roadmap')}>Mapa de cultivo</MenuItem>
+                <MenuItem onClick={()=> scrollTo('showcase')}>Especies</MenuItem>
+                <MenuItem onClick={()=> scrollTo('team')}>MushiLovers</MenuItem>
+                <MenuItem onClick={()=> scrollTo('faq')}>Pedidos/Envios</MenuItem>
 
             </MenuItems>
         </Container>
             <Button>
                 <span>
-                    &copy; {new Date().getFullYear()} Weirdos Club. All rights reserved.
+                    &copy; {new Date().getFullYear()} Mushi genetics. All rights reserved.
                 </span>
                 <span>
                     Made with &#10084; by <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                    CodeBucks
+                    MushiGenetics
                 </a>
                 </span>
             </Button>

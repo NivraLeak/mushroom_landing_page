@@ -1,15 +1,9 @@
 import React from 'react'
 import styled from "styled-components";
 
-import img1 from '../../assets/Nfts/bighead-1.svg';
-import img2 from '../../assets/Nfts/bighead-2.svg';
-import img3 from '../../assets/Nfts/bighead-3.svg';
-import img4 from '../../assets/Nfts/bighead-4.svg';
-import img5 from '../../assets/Nfts/bighead-5.svg';
-import img6 from '../../assets/Nfts/bighead-6.svg';
-import img7 from '../../assets/Nfts/bighead-7.svg';
-import img8 from '../../assets/Nfts/bighead-8.svg';
-import img9 from '../../assets/Nfts/bighead-9.svg';
+import img1 from '../../assets/strains/strainsSvg/gandalf03 1.svg';
+import img2 from '../../assets/strains/strainsSvg/enigma 1.svg';
+import img3 from '../../assets/strains/strainsSvg/melek 1.svg';
 import ConfettiComponent from "../Confetti";
 
 const Section = styled.section`
@@ -23,8 +17,6 @@ const Section = styled.section`
   align-items: center;
   flex-direction: column;
 `;
-
-
 const Title = styled.h2`
   font-size: ${props=> props.theme.fontxxl};
   text-transform: capitalize;
@@ -71,7 +63,7 @@ const Item = styled.div`
   
   &:hover{
     img{
-      transform: translateY(-2rem) scale(1.2);
+      transform: scale(90%);
     }
   }
 
@@ -90,8 +82,10 @@ const ImgContainer = styled.div`
   padding: 1rem;
   img{
     width: 100%;
-    height: auto;
+    height: 20rem;
     transition: all 0.3s ease;
+    object-fit: cover;
+    border-radius: 15px;
   }
 `;
 
@@ -131,17 +125,11 @@ const Team = () => {
   return (
     <Section id="team">
         <ConfettiComponent/>
-      <Title>Team</Title>
+      <Title>Team monster mushrooms</Title>
       <Container>
-        <MemberComponent img={img1} name="Weirdo" position="founder"/>
-        <MemberComponent img={img2} name="Weirdo" position="founder"/>
-        <MemberComponent img={img3} name="Weirdo" position="founder"/>
-        <MemberComponent img={img4} name="Weirdo" position="founder"/>
-        <MemberComponent img={img5} name="Weirdo" position="founder"/>
-        <MemberComponent img={img6} name="Weirdo" position="founder"/>
-        <MemberComponent img={img7} name="Weirdo" position="founder"/>
-        <MemberComponent img={img8} name="Weirdo" position="founder"/>
-        <MemberComponent img={img9} name="Weirdo" position="founder"/>
+        <MemberComponent img={img1} name="Gandalf" position="Raro"/>
+        <MemberComponent img={img2} name="Enigma" position="Raro"/>
+        <MemberComponent img={img3} name="Melek" position="Mutacion"/>
       </Container>
     </Section>
   )

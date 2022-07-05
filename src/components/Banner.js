@@ -1,15 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import Button from './Button';
-import img1 from '../assets/Nfts/bighead-1.svg';
-import img2 from '../assets/Nfts/bighead-2.svg';
-import img3 from '../assets/Nfts/bighead-3.svg';
-import img4 from '../assets/Nfts/bighead-4.svg';
-import img5 from '../assets/Nfts/bighead-5.svg';
-import img6 from '../assets/Nfts/bighead-6.svg';
-import img7 from '../assets/Nfts/bighead-7.svg';
-import img8 from '../assets/Nfts/bighead-8.svg';
-import img9 from '../assets/Nfts/bighead-9.svg';
+
+import img1 from '../assets/strains/strainsSvg/b+Fondo 1.svg';
 
 const Section = styled.section`
   display: flex;
@@ -20,8 +12,8 @@ const Section = styled.section`
   background-color: ${props=> `rgba(${props.theme.textRgba},0.9)`};
   border-top: 2px solid ${props=> props.theme.text};
   width: 100vw;
-  height: 25rem;
-
+  min-width: 25rem;
+  height: 20rem;
   @media (max-width: 48em) {
     height: 15rem;
     flex-direction: column;
@@ -38,29 +30,26 @@ const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.2;
+
   img{
-    width: 15rem;
-    height: auto;
+    width: 100%;
   }
 
   @media (max-width: 48em) {
     img{
-      width: 10rem;
-      height: auto;
+      width: fit-content;
     }
   }
 `;
 const Title = styled.h1`
-font-size: ${props=> props.theme.fontxxxl};
+font-size: ${props=> props.theme.fontxxl};
   color: ${props=>props.theme.body};
   padding: 1rem 2rem;
   z-index: 10;
   width: 35%;
   text-transform: capitalize;
-  
-  text-shadow: 1px 1px 2px ${props=> props.theme.text};
 
+  text-shadow: -2px 2px  0.5em ${props=>props.theme.text};
   @media (max-width: 64em) {
     width: 40%;
     font-size: ${props=> props.theme.fontxxl};
@@ -78,7 +67,8 @@ const BtnContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   font-size: ${props=> props.theme.fontxl};
-
+  
+  
   @media (max-width: 48em) {
     width: 100%;
     justify-content: center;
@@ -99,7 +89,11 @@ border-radius: 50px;
 cursor: pointer;
 transition: all 0.2s ease;
 position: relative;
-@media(max-width: 48em){
+  
+  box-shadow: -2px 2px  1em ${props=>props.theme.text};
+  
+  text-shadow: -1px 1px  0.2em ${props=>props.theme.text};
+  @media(max-width: 48em){
   padding: 1rem 2rem;
 }
   @media(max-width: 30em){
@@ -132,16 +126,11 @@ const Banner = () =>{
         <Section>
             <ImgContainer>
                 <img src={img1} alt="the weidos" />
-                <img src={img2} alt="the weidos" />
-                <img src={img3} alt="the weidos" />
-                <img src={img4} alt="the weidos" />
-                <img src={img5} alt="the weidos" />
-                <img src={img6} alt="the weidos" />
             </ImgContainer>
-            <Title>Join the  <br/> weirdos club </Title>
+            <Title>Unete a la comunidad  <br/> Mushi Genetics </Title>
             <BtnContainer>
                 <JoinNow>
-                    Join Now
+                    Unete ahora
                 </JoinNow>
             </BtnContainer>
         </Section>

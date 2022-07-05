@@ -6,7 +6,6 @@ const ImgContainer = styled.div`
   width: 15rem;
   padding: 1rem;
   margin: 0 1rem;
-  border-radius: 20px;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -16,7 +15,6 @@ const ImgContainer = styled.div`
     width: 15rem;
     height: 15rem;
     object-fit: cover;
-    border-radius: 20px;
     box-shadow: -0.3em 0.3em .6em ${props=>props.theme.text};
     
     @media(max-width: 80em) {
@@ -57,24 +55,55 @@ const CharStart = styled.div`
     }
   }
 `;
+const ImageNameContainer = styled.div`
+  border: ${props=>props.theme.body} 1px dotted;
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  
+  justify-content: center;
+  display: flex;
+  
+  box-shadow: -0.45em 0.35em .6em ${props=>props.theme.text};
+`;
+
 const Name = styled.h1`
+  background-color: ${props => `rgba(${props.theme.bodyRgba},0.3)`};
+  backdrop-filter: blur(4px);
+  position: absolute;
+  bottom: 1rem;
+  border-radius: 25px;
+  width: 70%;
   font-size:  ${props=>props.theme.fontcard};
   color: ${props=>props.theme.body};
   font-weight: bold;
   padding: 0.5rem;
   font-family: 'Akaya Telivigala', cursive;
   text-align: center;
-  text-shadow: -0.4em 0.4em .4em ${props=>props.theme.text};
+  text-shadow: -0.1em 0.1em .1em ${props=>props.theme.text};
   @media(max-width: 48em) {
     font-size: ${props=>props.theme.fontxs};
   }
+
+  box-shadow: -0.2em 0.2em .4em ${props=>props.theme.text};;
 `;
+
+const DetailsContainer = styled.div`
+  margin-top: 1rem;
+  backdrop-filter: blur(50px);
+`;
+
+
 const Card = ({img,name,visuales,produccion,sensitivo,dificultad}) => {
     return(
         <ImgContainer>
-            <img src={img} alt={name}/>
-            <div>
+            <ImageNameContainer>
                 <Name> {name}</Name>
+                <img src={img} alt={name}/>
+            </ImageNameContainer>
+            <DetailsContainer>
                     <CharStart>
                         <h1>Visuales</h1>
                         <ReactStars
@@ -119,7 +148,7 @@ const Card = ({img,name,visuales,produccion,sensitivo,dificultad}) => {
                             edit={false}
                         />
                     </CharStart>
-            </div>
+            </DetailsContainer>
         </ImgContainer>
     );
 }

@@ -216,6 +216,9 @@ const RoadMap = () => {
                     </SvgContainer>
                 * */
             }
+            <SvgContainer>
+                <DrawSvg/>
+            </SvgContainer>
         </Container>
     </Section>
   )

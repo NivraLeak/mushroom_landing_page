@@ -1,12 +1,13 @@
 import React, {useEffect, useRef} from 'react';
 import styled from "styled-components";
-import {Swiper, SwiperSlide} from "swiper/react";
+import {Swiper, SwiperSlide, useSwiperSlide} from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 
-import {Pagination,Navigation,Autoplay, EffectCards} from "swiper"
+import {Pagination,Navigation,Autoplay, EffectCards} from "swiper";
 import Arrow from "../assets/Arrow.svg";
+
 
 const Container = styled.div`
   width: 100%;
@@ -73,33 +74,46 @@ const Container = styled.div`
   }
 `
 const DetailsContainer = styled.div`
-  width: 100%;
-  height: 100%;
+  margin-bottom: 1rem;
+  width: 70%;
+  height: fit-content;
   position: absolute;
+  transform: translateY(50%);
   display: inline-grid;
-
   align-content: center;
-  justify-content: space-evenly;
   align-items: center;
+  justify-items: center;
+  justify-content: center;
+
+  backdrop-filter: blur(3px);
+  background-color: ${props => `rgba(${props.theme.bodyRgba},0.2)`};
+
+  border-radius: 20px;
 `;
 const Title = styled.h2`
-  align-self: center;
-  padding: 1em;
+  padding: 0.5em 0.5em 0.2em 0.5em;
   font-size: ${props=> props.theme.fontxs};
   color: ${props=>props.theme.text};
   text-align: center;
-  text-shadow: -0.1em 0.1em .15em ${props=>props.theme.body};
+  text-shadow: -0.15em 0.15em .2em ${props=>props.theme.text};
+
+  border-radius: 25px;
+  width: fit-content;
+  
   @media(max-width: 40em) {
     font-size: calc(${props=> props.theme.fontxs} - 0.35em);
   }
 `
 const SubTitle=styled.h2`
-  padding: 1em;
+  padding: 0 1em 1em 0.5em;
   font-size: ${props => props.theme.fontxsS};
+  width: fit-content;
+
+  border-radius: 25px;
   font-weight: 600;
-  color: ${props=>props.theme.text};
+  color: ${props=>props.theme.body};
   text-align: center;
-  text-shadow: -0.1em 0.1em .15em ${props=>props.theme.body};
+  text-shadow: -0.15em 0.15em .2em ${props=>props.theme.text};
   @media(max-width: 40em) {
     font-size: calc(${props=> props.theme.fontxs} - 0.42em);
   }
@@ -128,6 +142,7 @@ const CarouselMap = ({title, subText,text, img, id, radioImg, opacityDetect}) =>
     const slide01 = useRef(null);
     const slide02 = useRef(null);
     const slide03 = useRef(null);
+    const swiperSlide = useSwiperSlide();
 
     useEffect( () => {
         const Slide01 = slide01.current;
@@ -135,19 +150,13 @@ const CarouselMap = ({title, subText,text, img, id, radioImg, opacityDetect}) =>
         const Slide03 = slide03.current;
         if (id == opacityDetect){
             //Slide01.childNodes[1].childNodes[0].style.fontSize = '8px';
-            Slide02.childNodes[0].style.filter = 'blur(1px)';
-            console.log("AKI: ")
+                console.log("Active",slide02 )
         }
-
-
     },[opacityDetect]);
-
-
 
     return (
         <Container >
             <Swiper
-
                 autoplay ={{
                     delay:2000,
                     disableOnInteraction:false,
