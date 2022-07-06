@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mushroom_landing_page/static/css/main.f50318aa.css",
-    "main.js": "/mushroom_landing_page/static/js/main.9734b1c6.js",
-    "static/media/gandalfHomeVideo.mp4": "/mushroom_landing_page/static/media/gandalfHomeVideo.a2e4136cdfa56ccbfe07.mp4",
+    "main.js": "/mushroom_landing_page/static/js/main.277b8bc6.js",
+    "static/media/gandalfCultivoHome.gif": "/mushroom_landing_page/static/media/gandalfCultivoHome.8b02975af13735c68ef1.gif",
     "static/media/akaya-telivigala-all-400-normal.woff": "/mushroom_landing_page/static/media/akaya-telivigala-all-400-normal.78fd8cb2a221beeb77ce.woff",
     "static/media/sustrato.jpg": "/mushroom_landing_page/static/media/sustrato.3db522409a7e8c44a1ec.jpg",
     "static/media/mushi.png": "/mushroom_landing_page/static/media/mushi.46598336e4721330f85c.png",
@@ -28,10 +28,10 @@
     "static/media/Arrow.svg": "/mushroom_landing_page/static/media/Arrow.2aa046cef6c722596b055a335b4a9792.svg",
     "index.html": "/mushroom_landing_page/index.html",
     "main.f50318aa.css.map": "/mushroom_landing_page/static/css/main.f50318aa.css.map",
-    "main.9734b1c6.js.map": "/mushroom_landing_page/static/js/main.9734b1c6.js.map"
+    "main.277b8bc6.js.map": "/mushroom_landing_page/static/js/main.277b8bc6.js.map"
   },
   "entrypoints": [
     "static/css/main.f50318aa.css",
-    "static/js/main.9734b1c6.js"
+    "static/js/main.277b8bc6.js"
   ]
 }
