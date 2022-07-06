@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-import img1 from '../assets/strains/strainsSvg/b+Fondo 1.svg';
+import img1 from '../assets/strains/strainsOpt/B+ fondo.jpg';
 
 const Section = styled.section`
   display: flex;

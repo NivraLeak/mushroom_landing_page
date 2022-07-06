@@ -7,12 +7,12 @@ import "swiper/css/navigation";
 
 import {Pagination,Navigation,Autoplay, EffectCards} from "swiper";
 
-import img1 from '../../assets/strains/strainsSvg/melek 1.svg'
-import img2 from '../../assets/strains/strainsSvg/ThaiKohsumui 1.svg';
-import img3 from '../../assets/strains/strainsSvg/enigma 1.svg';
-import img4 from '../../assets/strains/strainsSvg/gandalf 1.svg';
-import img5 from '../../assets/strains/strainsSvg/gandalf03 1.svg';
-import img6 from '../../assets/strains/strainsSvg/b+Fondo 1.svg';
+import img1 from '../../assets/strains/strainsOpt/melek.jpg'
+import img2 from '../../assets/strains/strainsOpt/ThaiKohsumui.jpg';
+import img3 from '../../assets/strains/strainsOpt/enigma.jpg';
+import img4 from '../../assets/strains/strainsOpt/gandalf.jpg';
+import img5 from '../../assets/strains/strainsOpt/gandalf03.jpg';
+import img6 from '../../assets/strains/strainsOpt/b+Leu.jpg';
 
 
 import Arrow from '../../assets/Arrow.svg';

@@ -5,14 +5,14 @@ import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 //Imagenes
-import img1 from '../../assets/strains/strainsSvg/b+Fondo 1.svg';
-import granoColonizado from '../../assets/strains/granoColonizado.jpg';
-import vial from '../../assets/strains/viales.jpg';
-import micelio from '../../assets/strains/Micelium.jpg'
-import granoEsteril from '../../assets/strains/granoEsteril.jpg';
-import granoInoculado from '../../assets/strains/granoInoculado.jpg';
-import sustrato from '../../assets/strains/sustrato.jpg';
-import cosecha from '../../assets/strains/cosecha.jpg';
+import img1 from '../../assets/strains/strainsOpt/B+ fondo.jpg';
+import granoColonizado from '../../assets/strains/strainsOpt/granoColonizado.jpg';
+import vial from '../../assets/strains/strainsOpt/viales.jpg';
+import micelio from '../../assets/strains/strainsOpt/Micelium.jpg'
+import granoEsteril from '../../assets/strains/strainsOpt/granoEsteril.jpg';
+import granoInoculado from '../../assets/strains/strainsOpt/granoInoculado.jpg';
+import sustrato from '../../assets/strains/strainsOpt/sustrato.jpg';
+import cosecha from '../../assets/strains/strainsOpt/gandalfFlush.jpg';
 
 import CardCircle from "../CardCircle";
 

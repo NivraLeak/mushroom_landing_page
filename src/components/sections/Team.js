@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from "styled-components";
 
-import img1 from '../../assets/strains/strainsSvg/gandalf03 1.svg';
-import img2 from '../../assets/strains/strainsSvg/enigma 1.svg';
-import img3 from '../../assets/strains/strainsSvg/melek 1.svg';
+import img1 from '../../assets/strains/strainsOpt/gandalf.jpg';
+import img2 from '../../assets/strains/strainsOpt/enigma.jpg';
+import img3 from '../../assets/strains/strainsOpt/melek.jpg';
 import ConfettiComponent from "../Confetti";
 
 const Section = styled.section`
