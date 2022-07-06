@@ -108,7 +108,7 @@ const Card = ({img,name,visuales,produccion,sensitivo,dificultad}) => {
         <ImgContainer>
             <ImageNameContainer>
                 <Name> {name}</Name>
-                <img src={img} alt={name}/>
+                <img src={img} alt={name} loading="lazy"/>
             </ImageNameContainer>
             <DetailsContainer>
                     <CharStart>

@@ -126,7 +126,7 @@ const Banner = () =>{
     return(
         <Section>
             <ImgContainer>
-                <img src={img1} alt="the weidos" />
+                <img src={img1} alt="the weidos" loading="lazy" />
             </ImgContainer>
             <Title>Unete a la comunidad  <br/> Mushi Genetics </Title>
             <BtnContainer>

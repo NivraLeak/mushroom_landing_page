@@ -283,11 +283,6 @@ const CardCircle = ({firstRadio, secondRadio,secondCircleRadio,firstCircleRadio,
     function changeBackground(e,element) {
         setOpacityDetect(element.id);
     }
-    let play = (e,element) =>{
-        changeBackground(e,element);
-    }
-    let pause = (e) =>{
-    }
 
     return(
         <Container >

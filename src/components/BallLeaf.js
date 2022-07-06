@@ -24,8 +24,6 @@ const BallContainer = styled.div`
 `;
 
 const Ball = styled.div`
-  //transform: translate(-50%);
-  //margin-left: 50%;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;

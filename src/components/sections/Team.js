@@ -113,7 +113,7 @@ const MemberComponent = ({img,name="",position=""}) =>{
   return(
       <Item>
         <ImgContainer>
-          <img src={img} alt={name}/>
+          <img src={img} alt={name} loading="lazy"/>
         </ImgContainer>
           <Name>{name}</Name>
           <Position>{position}</Position>

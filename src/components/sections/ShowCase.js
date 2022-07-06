@@ -151,7 +151,7 @@ const NftItem = ({img,passRef, number=0, priceVial=0,pricePlacaColonizado, price
     }
     return(
         <ImgContainer onMouseOver={e=>pause(e)} onMouseOut={e=>play(e)}  >
-            <img src={img} alt="The weirdos"  />
+            <img src={img} alt="The weirdos"  loading="lazy" />
             <Details>
                 <div>
                     <span>Disponible en: </span> <br/>

@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 
 import {Pagination,Navigation,Autoplay, EffectCards} from "swiper";
 import Arrow from "../assets/Arrow.svg";
-
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 const Container = styled.div`
   width: 100%;
@@ -181,20 +181,27 @@ const CarouselMap = ({title, subText,text, img, id, radioImg, opacityDetect}) =>
                 ref={mySwiper}
             >
                 <SwiperSlide ref={slide01} >
-                    <ImageContainer img={img} />
+                    <LazyLoadComponent id={id}>
+                        <ImageContainer img={img} />
+                    </LazyLoadComponent>
+
                     <DetailsContainer radio={radioImg} className="AKI">
                         <Title>{title} </Title>
                         <SubTitle>{subText}</SubTitle>
                     </DetailsContainer>
                 </SwiperSlide>
                 <SwiperSlide ref={slide02} >
-                    <ImageContainer img={img} />
+                    <LazyLoadComponent id={id}>
+                        <ImageContainer img={img} />
+                    </LazyLoadComponent>
                     <DetailsContainer radio={radioImg} className="AKI">
                         <Text>{text}</Text>
                     </DetailsContainer>
                 </SwiperSlide >
                 <SwiperSlide ref={slide03}>
-                    <ImageContainer img={img} />
+                    <LazyLoadComponent id={id}>
+                        <ImageContainer img={img} />
+                    </LazyLoadComponent>
                 </SwiperSlide>
             </Swiper>
 

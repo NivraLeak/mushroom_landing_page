@@ -43,7 +43,7 @@ const Logo = () => {
               <br/>
               Mushi
           </h1>
-          <img src={logoImg} alt="logoMushi"/>
+          <img src={logoImg} alt="logoMushi" loading="lazy"/>
       </LogoContainer>
 
   )
