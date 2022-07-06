@@ -240,7 +240,6 @@ const MediumCircle = styled.div`
 const CardCircle = ({firstRadio, secondRadio,secondCircleRadio,firstCircleRadio, array}) => {
     const [opacityDetect, setOpacityDetect] = useState(0);
     const [radioCircleDetect, setRadioCircleDetect] = useState(0);
-
     const SmallGraph = useRef(null);
     const MediumGraph = useRef(null);
 
@@ -262,14 +261,18 @@ const CardCircle = ({firstRadio, secondRadio,secondCircleRadio,firstCircleRadio,
             MediumCircle.style.transform = `rotate(${angle}deg) translate(${MediumCirclegraph.clientWidth /
             2}px) rotate(-${angle}deg)`;
 
-            if (i.toString() === opacityDetect){
+            if (i.toString() === opacityDetect.toString()){
                 MediumCircle.style.transform = `translate(-${MediumCirclegraph.clientWidth /
                 100}px)`;
                 MediumCircle.childNodes[0].style.transform =  'scale(3.6)';
                 console.log(MediumCircle.childNodes[0].childNodes[0].childNodes[4].childNodes[1].childNodes[1]);
                 MediumCircle.childNodes[0].childNodes[0].childNodes[4].childNodes[1].childNodes[1].style.fontSize= '10px';
+                SmallCircle.style.backgroundColor="#c0b5ec";
+                SmallCircle.style.color = "#181e3b";
             }else {
                 MediumCircle.childNodes[0].style.transform =  'scale(1)';
+                SmallCircle.style.backgroundColor= "#181e3b";
+                SmallCircle.style.color = "#c0b5ec";
             }
 
 
@@ -282,25 +285,23 @@ const CardCircle = ({firstRadio, secondRadio,secondCircleRadio,firstCircleRadio,
     }
     let play = (e,element) =>{
         changeBackground(e,element);
-        let angle = ((360/12)*element.id)+ 30;
-
-        setRadioCircleDetect(angle)
     }
     let pause = (e) =>{
     }
+
     return(
         <Container >
             <FirstCircleGraph ref={SmallGraph} radio={firstRadio} >
                 {
                     array.map(element =>
-                        <SmallCircle zIndex={10}  key={element.id} onMouseOver={(e) => play(e,element)} onMouseOut={(e)=> pause(e)} radio={firstCircleRadio}><h1>{element.id}</h1></SmallCircle>
+                        <SmallCircle onClick={(e) => changeBackground(e,element)} zIndex={10}  key={element.id}  radio={firstCircleRadio}><h1>{element.id}</h1></SmallCircle>
                     )
                 }
             </FirstCircleGraph>
             <SecondCircleGraph selectId={opacityDetect} ref={MediumGraph} radio={secondRadio}>
                 {
                     array.map(element =>
-                        <MediumCircle  key={element.id} radio={secondCircleRadio} idElement={element.id} selectId={opacityDetect} radioCircleDetect={radioCircleDetect}>
+                        <MediumCircle   key={element.id} radio={secondCircleRadio} idElement={element.id} selectId={opacityDetect} radioCircleDetect={radioCircleDetect}>
                             <CarouselMap opacityDetect={opacityDetect} radioImg={secondCircleRadio} id={element.id} title={element.title} subText={element.subText} text={element.recipe} img={element.img}/>
                         </MediumCircle>
                     )

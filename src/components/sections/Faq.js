@@ -134,22 +134,18 @@ const Faq = () => {
       <Container>
         <Box>
             <Accordion title="¿Cuanto rinde la producción?">
-                <l1>
                     Esto dependerá principalmente de la cantidad de nutrientes y rasgos distintivos de la especie.
                    <br/>
                     - Un kit conformado por 1L de grano colonizado y 2L de sustrato podran rendir en un 1° flush o cosecha un total de 400-500 gramos en fresco.<br/>
                     - Tambien dependerá de las condiciones climaticas (90% humedad, oxigeno, 22°C - 24°C). <br/>
                     - Si tu especie es productora podrá rendir hasta un quinto flush o cosecha. <br/>
                     - Las especie provenientes de una mutacion de Melmac normalmente producen 2 flushes.<br/>
-                </l1>
             </Accordion>
             <Accordion title="¿Como se realizan los envios?">
-                <l1>
                     Los envios se realizarán los lunes y martes por las agencias olva y shalom. <br/>
                     - Luego de realizar tu pago se agendará tu pedido al dia mas cercano, ya sea martes o lunes para su envio. <br/>
                     - Podras recoger tu pedido en un plazo maximo de 2 dias.<br/>
                     - Los costos de envio son totalmente por separado, debido que no contamos con delivery por el momento. <br/>
-                </l1>
             </Accordion>
             <Accordion title="¿Que es lo que debo hacer una vez tenga mi kit?">
                 Primero tienes que verificar si el kit llego en optimas condiciones.<br/>

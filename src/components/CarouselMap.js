@@ -16,6 +16,8 @@ const Container = styled.div`
   .swiper{
     width: 100%;
     height: 100%;
+    transition: all 1.5s ease;
+    visibility: hidden;
   }
   .swiper-slide{
     border-radius: 50%;
@@ -23,6 +25,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
   
   .swiper-button-next{
@@ -142,15 +145,20 @@ const CarouselMap = ({title, subText,text, img, id, radioImg, opacityDetect}) =>
     const slide01 = useRef(null);
     const slide02 = useRef(null);
     const slide03 = useRef(null);
+    const mySwiper = useRef(null);
     const swiperSlide = useSwiperSlide();
 
     useEffect( () => {
+        const MySwiper = mySwiper.current;
         const Slide01 = slide01.current;
         const Slide02 = slide02.current;
         const Slide03 = slide03.current;
         if (id == opacityDetect){
             //Slide01.childNodes[1].childNodes[0].style.fontSize = '8px';
-                console.log("Active",slide02 )
+            MySwiper.style.visibility="visible"
+            console.log("Active",MySwiper.style.backgroundColor )
+        }else {
+            MySwiper.style.visibility="hidden"
         }
     },[opacityDetect]);
 
@@ -170,6 +178,7 @@ const CarouselMap = ({title, subText,text, img, id, radioImg, opacityDetect}) =>
                 grabCursor={true}
                 modules={[EffectCards,Pagination,Navigation]}
                 className="mySwiper"
+                ref={mySwiper}
             >
                 <SwiperSlide ref={slide01} >
                     <ImageContainer img={img} />

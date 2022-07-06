@@ -9,14 +9,15 @@ const Section = styled.section`
   align-items: center;
   overflow: hidden;
   position: relative;
-  background-color: ${props=> `rgba(${props.theme.textRgba},0.9)`};
   border-top: 2px solid ${props=> props.theme.text};
   width: 100vw;
-  min-width: 25rem;
+  min-width: 20rem;
   height: 20rem;
+  
   @media (max-width: 48em) {
     height: 15rem;
     flex-direction: column;
+    
   }
 
 `;
