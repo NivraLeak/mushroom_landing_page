@@ -1,5 +1,5 @@
 import React from 'react';
-import GIF from '../assets/strains/gandalfHomeVideo.mp4';
+import GIF from '../assets/strains/gandalfCultivoHome.gif';
 import styled from "styled-components";
 
 const VideoContainer = styled.div`
@@ -11,7 +11,7 @@ const VideoContainer = styled.div`
   
   border: 2px solid ${props => props.theme.text};
   border-radius: 70px;
-    video{
+    img{
       width: 100%;
       height: auto;
       border-radius: 65px;
@@ -34,7 +34,7 @@ const VideoContainer = styled.div`
 const CoverVideo = () => {
     return (
         <VideoContainer>
-            <video src={GIF} type="video/mp4" autoPlay muted loop />
+            <img src={GIF} type="video/gif"  alt="imgGandalf"/>
         </VideoContainer>
     );
 }
