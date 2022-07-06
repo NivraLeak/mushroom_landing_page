@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/mushroom_landing_page/static/css/main.f50318aa.css",
-    "main.js": "/mushroom_landing_page/static/js/main.fd954c27.js",
-    "static/media/enigma 1.svg": "/mushroom_landing_page/static/media/enigma 1.af49acde20332cd0f55d0b8f5e2fb5e7.svg",
-    "static/media/melek 1.svg": "/mushroom_landing_page/static/media/melek 1.e57ae911e67c128262f89837856b928c.svg",
+    "main.js": "/mushroom_landing_page/static/js/main.9734b1c6.js",
     "static/media/gandalfHomeVideo.mp4": "/mushroom_landing_page/static/media/gandalfHomeVideo.a2e4136cdfa56ccbfe07.mp4",
-    "static/media/b+Fondo 1.svg": "/mushroom_landing_page/static/media/b+Fondo 1.ab340bfa54837ff4ae4c8bcaa4253ee2.svg",
-    "static/media/ThaiKohsumui 1.svg": "/mushroom_landing_page/static/media/ThaiKohsumui 1.3fa19a3a8230065e7fb22a7b6a0c018b.svg",
-    "static/media/gandalf03 1.svg": "/mushroom_landing_page/static/media/gandalf03 1.a4ab329ff7d5dd80bdd8980b56942e67.svg",
-    "static/media/gandalf 1.svg": "/mushroom_landing_page/static/media/gandalf 1.f48bb7bfa806728b0142a9be75a6a53e.svg",
     "static/media/akaya-telivigala-all-400-normal.woff": "/mushroom_landing_page/static/media/akaya-telivigala-all-400-normal.78fd8cb2a221beeb77ce.woff",
-    "static/media/sustrato.jpg": "/mushroom_landing_page/static/media/sustrato.c31277be68feb4fe1949.jpg",
-    "static/media/cosecha.jpg": "/mushroom_landing_page/static/media/cosecha.a22394a5f3951d29d9c4.jpg",
+    "static/media/sustrato.jpg": "/mushroom_landing_page/static/media/sustrato.3db522409a7e8c44a1ec.jpg",
     "static/media/mushi.png": "/mushroom_landing_page/static/media/mushi.46598336e4721330f85c.png",
-    "static/media/viales.jpg": "/mushroom_landing_page/static/media/viales.b9c240bc84ae525827db.jpg",
-    "static/media/granoEsteril.jpg": "/mushroom_landing_page/static/media/granoEsteril.0cd63126278da2b60f0f.jpg",
-    "static/media/granoColonizado.jpg": "/mushroom_landing_page/static/media/granoColonizado.94b007a5125078f4ce75.jpg",
-    "static/media/Micelium.jpg": "/mushroom_landing_page/static/media/Micelium.615a3e00bba5bd28f771.jpg",
+    "static/media/b+Leu.jpg": "/mushroom_landing_page/static/media/b+Leu.87199404e90597703411.jpg",
+    "static/media/enigma.jpg": "/mushroom_landing_page/static/media/enigma.8ff228f3a5333a265054.jpg",
     "static/media/akaya-telivigala-telugu-400-normal.woff2": "/mushroom_landing_page/static/media/akaya-telivigala-telugu-400-normal.cc24af700d82d6ced8f6.woff2",
-    "static/media/granoInoculado.jpg": "/mushroom_landing_page/static/media/granoInoculado.d25faf6a53fa87502b45.jpg",
+    "static/media/gandalfFlush.jpg": "/mushroom_landing_page/static/media/gandalfFlush.e1819703c280acf234d8.jpg",
+    "static/media/melek.jpg": "/mushroom_landing_page/static/media/melek.dce128a067b7dfbd10ea.jpg",
+    "static/media/granoEsteril.jpg": "/mushroom_landing_page/static/media/granoEsteril.e171d58e9d2e45d761d1.jpg",
+    "static/media/B+ fondo.jpg": "/mushroom_landing_page/static/media/B+ fondo.bab4ccd3bcc272f21721.jpg",
+    "static/media/granoColonizado.jpg": "/mushroom_landing_page/static/media/granoColonizado.bab38a0e0431dc2d2619.jpg",
+    "static/media/viales.jpg": "/mushroom_landing_page/static/media/viales.0ccb58df53313f3eb7e2.jpg",
+    "static/media/Micelium.jpg": "/mushroom_landing_page/static/media/Micelium.564e1ce3f6df2b53c3f3.jpg",
+    "static/media/ThaiKohsumui.jpg": "/mushroom_landing_page/static/media/ThaiKohsumui.784042b2d43d9b200f83.jpg",
+    "static/media/granoInoculado.jpg": "/mushroom_landing_page/static/media/granoInoculado.de09cf86705d751491b9.jpg",
+    "static/media/gandalf03.jpg": "/mushroom_landing_page/static/media/gandalf03.f70530b985ee5ef17471.jpg",
     "static/media/akaya-telivigala-latin-400-normal.woff2": "/mushroom_landing_page/static/media/akaya-telivigala-latin-400-normal.6adfb2bb1dd65aa73a6c.woff2",
+    "static/media/gandalf.jpg": "/mushroom_landing_page/static/media/gandalf.5bc2fdb9930edb422c03.jpg",
     "static/media/sora-all-400-normal.woff": "/mushroom_landing_page/static/media/sora-all-400-normal.fc2a204a844d60c30272.woff",
     "static/media/akaya-telivigala-latin-ext-400-normal.woff2": "/mushroom_landing_page/static/media/akaya-telivigala-latin-ext-400-normal.806924fe3d6edb5e4e59.woff2",
     "static/media/sora-latin-400-normal.woff2": "/mushroom_landing_page/static/media/sora-latin-400-normal.7055d291e674243dedf8.woff2",
@@ -27,10 +28,10 @@
     "static/media/Arrow.svg": "/mushroom_landing_page/static/media/Arrow.2aa046cef6c722596b055a335b4a9792.svg",
     "index.html": "/mushroom_landing_page/index.html",
     "main.f50318aa.css.map": "/mushroom_landing_page/static/css/main.f50318aa.css.map",
-    "main.fd954c27.js.map": "/mushroom_landing_page/static/js/main.fd954c27.js.map"
+    "main.9734b1c6.js.map": "/mushroom_landing_page/static/js/main.9734b1c6.js.map"
   },
   "entrypoints": [
     "static/css/main.f50318aa.css",
-    "static/js/main.fd954c27.js"
+    "static/js/main.9734b1c6.js"
   ]
 }
