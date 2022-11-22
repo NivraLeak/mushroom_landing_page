@@ -101,10 +101,6 @@ const Carousel = () => {
     return (
         <Container>
             <Swiper
-                autoplay ={{
-                delay:2000,
-                disableOnInteraction:false,
-            }}
             pagination={{type:'progressbar'}}
             navigation={true}
                 scrollbar={{
@@ -112,7 +108,7 @@ const Carousel = () => {
                 }}
             effect={"cards"}
             grabCursor={true}
-            modules={[EffectCards,Pagination,Navigation,Autoplay]}
+            modules={[EffectCards,Pagination,Navigation]}
             className="mySwiper"
             >
                 <SwiperSlide> <Card img={img1} name="Melek" visuales={4} dificultad={3} produccion={2} sensitivo={3} /> </SwiperSlide>

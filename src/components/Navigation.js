@@ -154,13 +154,13 @@ const Navigation = () => {
           <MenuItem onClick={()=> scrollTo('faq')}>Pedidos/Envios</MenuItem>
           <MenuItem>
             <div className="mobile">
-              <Button text="Connect with mushi" link="http://google.com"/>
+              <Button text="Connect with mushi" link="https://wa.me/message/7JJFR4P2AD3JK1"/>
             </div>
           </MenuItem>
         </Menu>
 
         <div className="desktop">
-          <Button text="Contacta a mushi" link="https://google.com"/>
+          <Button text="Contacta a mushi" link="https://wa.me/message/7JJFR4P2AD3JK1"/>
         </div>
       </NavBar>
     </Section>

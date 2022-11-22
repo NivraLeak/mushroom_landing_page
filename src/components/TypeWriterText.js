@@ -97,7 +97,7 @@ const TypeWriterText = () => {
         </Title>
         <SubTitle> Genetics mushi tiene como objetivo ser el primer proveedor de cultivo de hongos cubensis en Perú. </SubTitle>
         <ButtonContainer>
-            <Button text="Connect with mushi" link="#about"/>
+            <Button text="Connect with mushi" link="https://wa.me/message/7JJFR4P2AD3JK1"/>
         </ButtonContainer>
     </>
   )
