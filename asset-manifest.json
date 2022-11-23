@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/mushroom_landing_page/static/css/main.f50318aa.css",
-    "main.js": "/mushroom_landing_page/static/js/main.bd6ce084.js",
+    "main.js": "/mushroom_landing_page/static/js/main.94620e01.js",
     "static/media/gandalfCultivoHome.gif": "/mushroom_landing_page/static/media/gandalfCultivoHome.8b02975af13735c68ef1.gif",
+    "static/media/mushi.png": "/mushroom_landing_page/static/media/mushi.258f48655629889c2417.png",
     "static/media/akaya-telivigala-all-400-normal.woff": "/mushroom_landing_page/static/media/akaya-telivigala-all-400-normal.78fd8cb2a221beeb77ce.woff",
+    "static/media/Rounded-Text-Black.png": "/mushroom_landing_page/static/media/Rounded-Text-Black.a3c2848967f2b9bc7528.png",
     "static/media/sustrato.jpg": "/mushroom_landing_page/static/media/sustrato.3db522409a7e8c44a1ec.jpg",
-    "static/media/mushi.png": "/mushroom_landing_page/static/media/mushi.46598336e4721330f85c.png",
     "static/media/b+Leu.jpg": "/mushroom_landing_page/static/media/b+Leu.87199404e90597703411.jpg",
     "static/media/enigma.jpg": "/mushroom_landing_page/static/media/enigma.8ff228f3a5333a265054.jpg",
     "static/media/akaya-telivigala-telugu-400-normal.woff2": "/mushroom_landing_page/static/media/akaya-telivigala-telugu-400-normal.cc24af700d82d6ced8f6.woff2",
@@ -28,10 +29,10 @@
     "static/media/Arrow.svg": "/mushroom_landing_page/static/media/Arrow.2aa046cef6c722596b055a335b4a9792.svg",
     "index.html": "/mushroom_landing_page/index.html",
     "main.f50318aa.css.map": "/mushroom_landing_page/static/css/main.f50318aa.css.map",
-    "main.bd6ce084.js.map": "/mushroom_landing_page/static/js/main.bd6ce084.js.map"
+    "main.94620e01.js.map": "/mushroom_landing_page/static/js/main.94620e01.js.map"
   },
   "entrypoints": [
     "static/css/main.f50318aa.css",
-    "static/js/main.bd6ce084.js"
+    "static/js/main.94620e01.js"
   ]
 }
