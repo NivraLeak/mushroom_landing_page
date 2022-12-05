@@ -1,8 +1,8 @@
 {
-  "name": "the-weirdos-starter-code",
+  "name": "mushigenetics",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nivraleak.github.io/mushroom_landing_page/",
+  "homepage": "https://mushigenetics.com/",
   "dependencies": {
     "@fontsource/akaya-telivigala": "^4.5.6",
     "@fontsource/sora": "^4.5.8",
@@ -30,7 +30,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build && eco 'mushigenetics.com' > ./build/CNAME ",
+    "predeploy": "npm run build && echo mushigenetics.com > ./build/CNAME ",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
