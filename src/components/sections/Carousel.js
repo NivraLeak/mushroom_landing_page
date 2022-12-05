@@ -34,15 +34,20 @@ const Container = styled.div`
     height: 50vh;
     width: 35vw;
   }
+  
+  @media (max-width: 415px){
+    height: 40vh;
+    width: 50vw;
+  }
 
-  @media (max-width: 30em){
+  @media (max-width: 380px){
     height: 45vh;
     width: 55vw;
   }
   
   .swiper{
-    width: 95%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
   }
   .swiper-slide{
     background-color: ${props=>props.theme.carouselColor};

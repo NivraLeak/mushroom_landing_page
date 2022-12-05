@@ -1,5 +1,5 @@
 import React from 'react';
-import GIF from '../assets/strains/gandalfCultivoHome.gif';
+import packKitDeCultivo from '../assets/strains/packKitDeCultivo.png';
 import styled from "styled-components";
 
 const VideoContainer = styled.div`
@@ -34,7 +34,7 @@ const VideoContainer = styled.div`
 const CoverVideo = () => {
     return (
         <VideoContainer>
-            <img src={GIF} type="video/gif"  alt="imgGandalf"/>
+            <img src={packKitDeCultivo} alt="imgKitdeCultivo"/>
         </VideoContainer>
     );
 }

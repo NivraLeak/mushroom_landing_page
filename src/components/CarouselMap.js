@@ -88,11 +88,34 @@ const DetailsContainer = styled.div`
   justify-items: center;
   justify-content: center;
 
+
   backdrop-filter: blur(3px);
   background-color: ${props => `rgba(${props.theme.bodyRgba},0.2)`};
 
   border-radius: 20px;
 `;
+
+const DetailsContainerTitle = styled.div`
+  height: fit-content;
+  position: absolute;
+  top: 1.5em;
+  display: inline-grid;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+
+
+  backdrop-filter: blur(3px);
+  background-color: ${props => `rgba(${props.theme.bodyRgba},0.2)`};
+
+  border-radius: 20px;
+
+  @media(max-width: 450px) {
+    top: 0.5em;
+  }
+`
+
 const Title = styled.h2`
   padding: 0.5em 0.5em 0.2em 0.5em;
   font-size: ${props=> props.theme.fontxs};
@@ -108,7 +131,7 @@ const Title = styled.h2`
   }
 `
 const SubTitle=styled.h2`
-  padding: 0 1em 1em 0.5em;
+  padding: 1em 1em 1em 1em;
   font-size: ${props => props.theme.fontxsS};
   width: fit-content;
 
@@ -118,7 +141,7 @@ const SubTitle=styled.h2`
   text-align: center;
   text-shadow: -0.15em 0.15em .2em ${props=>props.theme.text};
   @media(max-width: 40em) {
-    font-size: calc(${props=> props.theme.fontxs} - 0.42em);
+    font-size: calc(${props=> props.theme.fontxs} - 0.43em);
   }
   @media(max-width: 70em) {
   }
@@ -141,7 +164,7 @@ const ImageContainer = styled.div`
 `;
 
 
-const CarouselMap = ({title, subText,text, img, id, radioImg, opacityDetect}) => {
+const CarouselMap = ({title, subText,slides, img, id, radioImg, opacityDetect}) => {
     const slide01 = useRef(null);
     const slide02 = useRef(null);
     const slide03 = useRef(null);
@@ -180,29 +203,35 @@ const CarouselMap = ({title, subText,text, img, id, radioImg, opacityDetect}) =>
                 className="mySwiper"
                 ref={mySwiper}
             >
-                <SwiperSlide ref={slide01} >
-                    <LazyLoadComponent id={id}>
-                        <ImageContainer img={img} />
-                    </LazyLoadComponent>
+                {
+                    slides.map(element => {
+                        if(element.id === "0"){
+                            return <SwiperSlide ref={slide01}>
+                                <LazyLoadComponent id={element.id}>
+                                    <ImageContainer img={img}/>
+                                </LazyLoadComponent>
 
-                    <DetailsContainer radio={radioImg} className="AKI">
-                        <Title>{title} </Title>
-                        <SubTitle>{subText}</SubTitle>
-                    </DetailsContainer>
-                </SwiperSlide>
-                <SwiperSlide ref={slide02} >
-                    <LazyLoadComponent id={id}>
-                        <ImageContainer img={img} />
-                    </LazyLoadComponent>
-                    <DetailsContainer radio={radioImg} className="AKI">
-                        <Text>{text}</Text>
-                    </DetailsContainer>
-                </SwiperSlide >
-                <SwiperSlide ref={slide03}>
-                    <LazyLoadComponent id={id}>
-                        <ImageContainer img={img} />
-                    </LazyLoadComponent>
-                </SwiperSlide>
+                                <DetailsContainerTitle  radio={radioImg} className="AKI">
+                                    <Title>{title} </Title>
+                                </DetailsContainerTitle>
+
+                                <DetailsContainer radio={radioImg} className="AKI">
+                                    <SubTitle>{element.subText} </SubTitle>
+                                </DetailsContainer>
+                            </SwiperSlide>
+                        }
+                        return <SwiperSlide ref={slide01}>
+                            <LazyLoadComponent id={element.id}>
+                                <ImageContainer img={img}/>
+                            </LazyLoadComponent>
+
+                            <DetailsContainer radio={radioImg} className="AKI">
+                                <SubTitle>{element.subText} </SubTitle>
+                            </DetailsContainer>
+                        </SwiperSlide>
+                        }
+                    )
+                }
             </Swiper>
 
         </Container>

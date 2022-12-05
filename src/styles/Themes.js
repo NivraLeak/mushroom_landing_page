@@ -1,9 +1,9 @@
 export const light = {
-    body:"#c0b5ec",
+    body:"#efe3b7",
     text:"#181e3b",
     carouselColor: "#484e80",
 
-    bodyRgba:"192,181,236",
+    bodyRgba:"239, 227, 183",
     textRgba:"24,30,59",
 
     fontxsSS:'0.4em',
@@ -25,8 +25,8 @@ export const light = {
 
 export const dark = {
     body:"#181e3b",
-    text:"#c0b5ec",
-    carouselColor: "#434980",
+    text:"#efe3b7",
+    carouselColor: "#484e80",
     bodyRgba:"32,32,32",
     textRgba:"255,255,255",
 

@@ -13,9 +13,9 @@ const LogoContainer = styled.div`
   align-items: center;
   justify-content: center;
   img{
-    width: 3rem;
+    width: 3.5rem;
     height: 4rem;
-    padding-left: 5px;
+    padding-right: 10px;
   }
   h1{
     font-family: 'Akaya Telivigala', cursive;
@@ -38,12 +38,12 @@ const Logo = () => {
   return (
       <LogoContainer>
           <Link to="/"/>
+          <img src={logoImg} alt="logoMushi" loading="lazy"/>
           <h1>
               Genetics
               <br/>
               Mushi
           </h1>
-          <img src={logoImg} alt="logoMushi" loading="lazy"/>
       </LogoContainer>
 
   )

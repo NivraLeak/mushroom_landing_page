@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styled, {keyframes} from "styled-components";
 import CarouselMap from "./CarouselMap";
+import {light} from "../styles/Themes";
 
 const rotate = keyframes`
   100%{
@@ -67,7 +68,7 @@ const SmallCircle = styled.div`
   margin: calc(-50px / 2);
   background-color: ${props => props.theme.text};
 
-  box-shadow: -1px 1px  .5em ${props=>props.theme.body};
+  box-shadow: -1px 1px  .5em ${props=>props.theme.text};
   border-radius: 50%;
 
   color: ${props => props.theme.body};
@@ -90,7 +91,7 @@ const SmallCircle = styled.div`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(0);
-      box-shadow: -1px 1px  .5em ${props=>props.theme.body};
+      box-shadow: -1px 1px  .5em ${props=>props.theme.text};
       width: 100%;
       height: 100%;
       border-radius: 50px;
@@ -264,15 +265,14 @@ const CardCircle = ({firstRadio, secondRadio,secondCircleRadio,firstCircleRadio,
             if (i.toString() === opacityDetect.toString()){
                 MediumCircle.style.transform = `translate(-${MediumCirclegraph.clientWidth /
                 100}px)`;
-                MediumCircle.childNodes[0].style.transform =  'scale(3.6)';
-                console.log(MediumCircle.childNodes[0].childNodes[0].childNodes[4].childNodes[1].childNodes[1]);
+                MediumCircle.childNodes[0].style.transform =  'scale(3.6)'
                 MediumCircle.childNodes[0].childNodes[0].childNodes[4].childNodes[1].childNodes[1].style.fontSize= '10px';
-                SmallCircle.style.backgroundColor="#c0b5ec";
-                SmallCircle.style.color = "#181e3b";
+                SmallCircle.style.backgroundColor= light.body;
+                SmallCircle.style.color = light.text;
             }else {
                 MediumCircle.childNodes[0].style.transform =  'scale(1)';
-                SmallCircle.style.backgroundColor= "#181e3b";
-                SmallCircle.style.color = "#c0b5ec";
+                SmallCircle.style.backgroundColor= light.text;
+                SmallCircle.style.color = light.body;
             }
 
 
@@ -297,7 +297,7 @@ const CardCircle = ({firstRadio, secondRadio,secondCircleRadio,firstCircleRadio,
                 {
                     array.map(element =>
                         <MediumCircle   key={element.id} radio={secondCircleRadio} idElement={element.id} selectId={opacityDetect} radioCircleDetect={radioCircleDetect}>
-                            <CarouselMap opacityDetect={opacityDetect} radioImg={secondCircleRadio} id={element.id} title={element.title} subText={element.subText} text={element.recipe} img={element.img}/>
+                            <CarouselMap opacityDetect={opacityDetect} radioImg={secondCircleRadio} id={element.id} title={element.title} subText={element.subText} slides={element.slides} img={element.img}/>
                         </MediumCircle>
                     )
                 }

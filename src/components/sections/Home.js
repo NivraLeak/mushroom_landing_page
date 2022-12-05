@@ -51,15 +51,13 @@ const rotate = keyframes`
 const Round = styled.div`
   position: absolute;
   bottom: 2rem;
-  right: 90%;
-  width: 6rem;
-  height: 6rem;
-  border: 1px solid ${props => props.theme.text};
-  border-radius: 50%;
+  right: 85%;
+  width: 8rem;
+  height: 8rem;
+  
   img{
     width: 100%;
-    height: auto;
-    animation: ${rotate} 6s linear infinite reverse;
+    height: 95%;
   }
 
   @media (max-width: 64em){
@@ -67,7 +65,7 @@ const Round = styled.div`
     height: 4rem;
     left: none;
     right: 2rem;
-    bottom: 100%;
+    bottom: 5%;
   }
 
   @media (max-width: 48em){
@@ -108,9 +106,6 @@ const Home = () => {
         <Box>  <CoverVideo/>   </Box>
 
           <Round>
-              <Circle>
-                  &#x2193;
-              </Circle>
               <img src={RoundTextBlack} alt="NFT"/>
           </Round>
       </Container>

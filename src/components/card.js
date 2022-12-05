@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import ReactStars from "react-stars/dist/react-stars";
+import {light} from "../styles/Themes";
 
 const ImgContainer = styled.div`
   width: 15rem;
@@ -116,8 +117,8 @@ const Card = ({img,name,visuales,produccion,sensitivo,dificultad}) => {
                         <ReactStars
                             count={5}
                             size={15}
-                            color2={"#b8aaeb"}
-                            color1={"rgba(123,127,208,0.5)"}
+                            color2={light.body}
+                            color1={`rgba(${light.bodyRgba},0.2)`}
                             value={visuales}
                             edit={false}
                         />
@@ -127,8 +128,8 @@ const Card = ({img,name,visuales,produccion,sensitivo,dificultad}) => {
                         <ReactStars
                             count={5}
                             size={15}
-                            color2={"#b8aaeb"}
-                            color1={"rgba(123,127,208,0.5)"}
+                            color2={light.body}
+                            color1={`rgba(${light.bodyRgba},0.2)`}
                             value={produccion}
                             edit={false}
                         />
@@ -138,8 +139,8 @@ const Card = ({img,name,visuales,produccion,sensitivo,dificultad}) => {
                         <ReactStars
                             count={5}
                             size={15}
-                            color2={"#b8aaeb"}
-                            color1={"rgba(123,127,208,0.5)"}
+                            color2={light.body}
+                            color1={`rgba(${light.bodyRgba},0.2)`}
                             value={sensitivo}
                             edit={false}
                         />
@@ -149,8 +150,8 @@ const Card = ({img,name,visuales,produccion,sensitivo,dificultad}) => {
                         <ReactStars
                             count={5}
                             size={15}
-                            color2={"#b8aaeb"}
-                            color1={"rgba(123,127,208,0.5)"}
+                            color2={light.body}
+                            color1={`rgba(${light.bodyRgba},0.2)`}
                             value={dificultad}
                             edit={false}
                         />
