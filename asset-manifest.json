@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4f4c8c9d.css",
-    "main.js": "/static/js/main.02d7c83f.js",
+    "main.js": "/static/js/main.ab84136f.js",
     "static/media/packKitDeCultivo.png": "/static/media/packKitDeCultivo.a0b5e2c1b0fbfb683da9.png",
     "static/media/mushi.png": "/static/media/mushi.258f48655629889c2417.png",
     "static/media/akaya-telivigala-all-400-normal.woff": "/static/media/akaya-telivigala-all-400-normal.78fd8cb2a221beeb77ce.woff",
@@ -29,10 +29,10 @@
     "static/media/Arrow.svg": "/static/media/Arrow.2aa046cef6c722596b055a335b4a9792.svg",
     "index.html": "/index.html",
     "main.4f4c8c9d.css.map": "/static/css/main.4f4c8c9d.css.map",
-    "main.02d7c83f.js.map": "/static/js/main.02d7c83f.js.map"
+    "main.ab84136f.js.map": "/static/js/main.ab84136f.js.map"
   },
   "entrypoints": [
     "static/css/main.4f4c8c9d.css",
-    "static/js/main.02d7c83f.js"
+    "static/js/main.ab84136f.js"
   ]
 }
