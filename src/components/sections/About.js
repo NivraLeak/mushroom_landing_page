@@ -137,14 +137,14 @@ const About = () => {
         <Box> <Carousel/> </Box>
         <Box>
             <Title>
-                Bienvenidos a la comunidad<br/> Mushi genetics.
+                Bienvenidos a la comunidad<br/> Mushi Peru.
             </Title>
             <SubText>
                 Puedes iniciar tu cultivo desde viales o placas si ya haz experimentado todo el proceso de cultivo. <br/>
                 Si eres nuevo, te recomendamos adquirir un <b>kit de cultivo</b> de esta forma podras iniciar desde el momento que te llegue tu kit.
             </SubText>
             <SubTextLight>
-                Mushi genetics fue creado para ser el primer proveedor de artefactos de cultivo indor de hongos magicos. <br/>
+                Mushi Peru fue creado para ser el primer proveedor de artefactos de cultivo indor de hongos magicos. <br/>
             </SubTextLight>
             <ButtonContainer>
                 <ThemeProvider theme={dark}>

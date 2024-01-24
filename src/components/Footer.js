@@ -141,11 +141,11 @@ const Footer = () => {
         </Container>
             <Button>
                 <span>
-                    &copy; {new Date().getFullYear()} Mushi genetics. All rights reserved.
+                    &copy; {new Date().getFullYear()} Mushi Peru. All rights reserved.
                 </span>
                 <span>
                     Made with &#10084; by <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                    MushiGenetics
+                    MushiPeru
                 </a>
                 </span>
             </Button>

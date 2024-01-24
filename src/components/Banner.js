@@ -128,7 +128,7 @@ const Banner = () =>{
             <ImgContainer>
                 <img src={img1} alt="the weidos" loading="lazy" />
             </ImgContainer>
-            <Title>Unete a la comunidad  <br/> Mushi Genetics </Title>
+            <Title>Unete a la comunidad  <br/> Mushi Peru </Title>
             <BtnContainer>
                 <JoinNow>
                     Unete ahora
