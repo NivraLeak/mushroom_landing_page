@@ -1,9 +1,9 @@
 import React from 'react';
-import packKitDeCultivo from '../assets/strains/packKitDeCultivo.png';
+import packKitDeCultivo from '../assets/kitsautomatico/Kitsportada.png';
 import styled from "styled-components";
 
 const VideoContainer = styled.div`
-  width: 100%;
+  width: 75%;
   padding: 0.5rem;
   align-content: center;
   justify-content: center;

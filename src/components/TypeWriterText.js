@@ -74,7 +74,7 @@ const TypeWriterText = () => {
   return (
     <>
         <Title>
-            Bienvenido a Genetics Mushi
+            Bienvenido a <br/>Mushi Perú
             <Typewriter
                 options= {{
                     autoStart: true,
@@ -95,9 +95,9 @@ const TypeWriterText = () => {
                 }}
             />
         </Title>
-        <SubTitle> Genetics mushi tiene como objetivo ser el primer proveedor de cultivo de hongos cubensis en Perú. </SubTitle>
+        <SubTitle> Mushi Perú tiene como objetivo <br/>facilitar el cultivo de hongos cubensis. </SubTitle>
         <ButtonContainer>
-            <Button text="Connect with mushi" link="https://wa.me/message/7JJFR4P2AD3JK1"/>
+            <Button text="Contacta a mushi" link="https://www.instagram.com/mushi_peru?igsh=NGd5djh3Y28xZjhy&utm_source=qr"/>
         </ButtonContainer>
     </>
   )

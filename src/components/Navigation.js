@@ -146,21 +146,21 @@ const Navigation = () => {
           &nbsp;
         </HamburgerMenu>
         <Menu click={click}>
-          <MenuItem onClick={()=> scrollTo('home')}>Home</MenuItem>
+          <MenuItem onClick={()=> scrollTo('home')}>Bienvenida</MenuItem>
           <MenuItem onClick={()=> scrollTo('about')}>¿Qué es?</MenuItem>
-          <MenuItem onClick={()=> scrollTo('roadmap')}>Mapa de <br/> cultivo</MenuItem>
+          <MenuItem onClick={()=> scrollTo('roadmap')}>Indicaciones</MenuItem>
           <MenuItem onClick={()=> scrollTo('showcase')}>Especies</MenuItem>
           <MenuItem onClick={()=> scrollTo('team')}>MushiLovers</MenuItem>
           <MenuItem onClick={()=> scrollTo('faq')}>Pedidos/Envios</MenuItem>
           <MenuItem>
             <div className="mobile">
-              <Button text="Connect with mushi" link="https://wa.me/message/7JJFR4P2AD3JK1"/>
+              <Button text="Contacta a mushi" link="https://www.instagram.com/mushi_peru?igsh=NGd5djh3Y28xZjhy&utm_source=qr"/>
             </div>
           </MenuItem>
         </Menu>
 
         <div className="desktop">
-          <Button text="Contacta a mushi" link="https://wa.me/message/7JJFR4P2AD3JK1"/>
+          <Button text="Contacta a mushi" link="https://www.instagram.com/mushi_peru?igsh=NGd5djh3Y28xZjhy&utm_source=qr"/>
         </div>
       </NavBar>
     </Section>
