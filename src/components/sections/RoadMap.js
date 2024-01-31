@@ -1,6 +1,4 @@
 import React, { useLayoutEffect, useRef } from 'react';
-import styled from "styled-components";
-import DrawSvg from "../DrawSvg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -15,53 +13,73 @@ import sustrato from '../../assets/strains/strainsOpt/sustrato.jpg';
 import cosecha from '../../assets/strains/strainsOpt/gandalfFlush.jpg';
 import videoSource from '../../assets/kitsautomatico/instasaveindica.mp4';
 
-import CardCircle from "../CardCircle";
-
+import styled, { ThemeProvider } from "styled-components";
+import Button from "../Button";
+import { dark, light } from '../../styles/Themes';
 
 const Box = styled.div`
 width: 50%;
 height: 100%;
 display: flex;
-  min-height: 60vh;
+min-height: 60vh;
 flex-direction: column;
 justify-content: center;
 align-items: center;
   
   @media (max-width: 40em){
-    min-height: 50vh;
+    min-height: 25vh;
   }
   
 `
 
 const Section = styled.section`
-  display: flex;
-  width: auto;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: ${props => props.theme.body};
+min-height: 100vh;
+width: 100%;
+background-color: ${props => props.theme.body};
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
 `;
-const Title = styled.h2`
+const Title = styled.h2`  
   font-size: ${props => props.theme.fontxxl};
+  text-transform: capitalize;
   color: ${props => props.theme.text};
-  margin: 1rem auto;
-  border-bottom: 2px solid ${props => props.theme.text};
-  width: fit-content;
+  align-self:flex-start;
+  width: 80%;
+  margin: 0 auto;
 
-  @media(max-width: 40em) {
+  @media (max-width: 64em){
+    width: 100%;
+    text-align: center;
+  }
+  @media (max-width: 40em){
     font-size: ${props => props.theme.fontxl};
+  }
+  @media (max-width: 30em){
+    font-size: ${props => props.theme.fontlg};
   }
 `
 const Container = styled.div`
-  border-radius: 50%;
-  position: relative;
+width: 75%;
+min-height: 80vh;
+margin: 0 auto;
+//background-color: lightblue;
+display: flex;
+justify-content: center;
+align-items: center;
   
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  padding: 1rem;
+  @media (max-width: 64em){
+    width: 85%;
+  }
+  @media (max-width: 48em){
+    flex-direction: column-reverse;
+    width: 100%;
+    &>*:first-child{
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
 `;
 const SvgContainer = styled.div`
   align-self: center;
@@ -104,33 +122,88 @@ const Text = styled.span`
 `
 
 const VideoContainer = styled.div`
-  width: 65%;
-  padding: 0.2rem;
+  width: 85%;
+  padding: 0.5rem;
   align-content: center;
   justify-content: center;
   display: flex;
-  
-  border: 2px solid ${props => props.theme.text};
-  border-radius: 50px;
-  video{
-      width: 100%;
+  border-radius: 40px;
+    video{
+      width: 70%;
       height: auto;
-      border-radius: 45px;
+      border-radius: 65px;
+      border: 0.1px solid ${props => props.theme.text};
 
       @media (max-width: 64em) {
-        min-width: 35vh;
+        width: 80%;
         height: auto;
         border-radius: 25px;
       }
     }
 
   @media (max-width: 64em) {
-    min-width: 35vh;
+   min-width: 40vh;
     height: auto;
-    border-radius: 25px;
+    border-radius: 35px;
   }
 `
 
+const SubText = styled.p`
+  font-size: ${props => props.theme.fontlg};
+  color: ${props => props.theme.text};
+  align-self:flex-start;
+  width: 80%;
+  margin: 1rem auto;
+  font-weight: normal;
+
+  @media (max-width: 64em){
+    width: 100%;
+    text-align: center;
+    font-size: ${props => props.theme.fontmd};
+  }
+  @media (max-width: 40em){
+    font-size: ${props => props.theme.fontmd};
+  }
+  @media (max-width: 30em){
+    font-size: ${props => props.theme.fontmd};
+  }
+`
+
+const SubTextLight = styled.p`
+  font-size: ${props => props.theme.fontsm};
+  color: ${props => props.theme.text};
+  align-self:flex-start;
+  width: 80%;
+  margin: 1rem auto;
+  font-weight: 400;
+
+  @media (max-width: 64em){
+    width: 100%;
+    text-align: center;
+    font-size: ${props => props.theme.fontsm};
+  }
+  @media (max-width: 40em){
+    font-size: ${props => props.theme.fontsm};
+  }
+  @media (max-width: 30em){
+    font-size: ${props => props.theme.fontxs};
+  }
+`
+const ButtonContainer = styled.div`
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  align-self: flex-start;
+
+  @media (max-width: 64em){
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    button{
+      margin: 0 auto;
+    }
+  }
+`
 const procesoCultivo = [
     {
         id: "0",
@@ -419,20 +492,43 @@ const RoadMap = () => {
 
     return (
         <Section id="roadmap" img={img1}>
-            <Title> Cuidados e indicaciones</Title>
             {
                 /* 
               <CardCircle array={procesoCultivo} firstRadio={44} secondRadio={35} firstCircleRadio={3} secondCircleRadio={9}/>
                 
                 */
             }
-            <Box>
-                <VideoContainer>
-                    <video controls src={videoSource} >
-                    </video>
-                </VideoContainer>
-            </Box>
-
+            <Container>
+                {
+                    /*
+                    <Box> <Carousel/> </Box>
+                    
+                    */
+                }
+                <Box >
+                    <ThemeProvider theme={light}>
+                        <Title>
+                            Cuidados <br/>kit automatico
+                        </Title>
+                        <SubText>
+                        - Reposo de 7-10 días.  <br/>
+                        - Abrir y cerrar kit después de 7-10 días.  <br/>
+                        - Cosecha en 15-20 días. <br/>
+                        - Sumergir pan en agua esteril por 2 horas después de la cosecha. <br/>
+                        - Escurrir y reposo adicional de 7-10 días. <br/>
+                        </SubText>
+                        <ButtonContainer>
+                            <Button text="Comunidad Instagram" link="https://www.instagram.com/mushi_peru?igsh=NGd5djh3Y28xZjhy&utm_source=qr" />
+                        </ButtonContainer>
+                    </ThemeProvider>
+                </Box>
+                <Box>
+                    <VideoContainer>
+                        <video controls src={videoSource} >
+                        </video>
+                    </VideoContainer>
+                </Box>
+            </Container>
         </Section>
     )
 }

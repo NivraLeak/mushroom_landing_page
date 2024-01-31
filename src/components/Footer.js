@@ -119,22 +119,22 @@ const Footer = () => {
             <Left>
                 <Logo/>
                 <IconList>
-                    <a href="https://www.google.com" target='_blank'
+                    <a href="https://www.facebook.com/sbapLek/about_contact_and_basic_info/?id=100083430305001&open_field=website&sk=about_contact_and_basic_info" target='_blank'
                         rel="noopener noreferrer">
                         <Facebook/>
                     </a>
-                    <a href="https://www.google.com" target='_blank'
+                    <a href="https://www.instagram.com/mushi_peru?igsh=NGd5djh3Y28xZjhy&utm_source=qr" target='_blank'
                        rel="noopener noreferrer">
                         <Instagram/>
                     </a>
                 </IconList>
             </Left>
             <MenuItems>
-                <MenuItem onClick={()=> scrollTo('home')}>Home</MenuItem>
+                <MenuItem onClick={()=> scrollTo('home')}>Bienvenida</MenuItem>
                 <MenuItem onClick={()=> scrollTo('about')}>¿Qué es?</MenuItem>
                 <MenuItem onClick={()=> scrollTo('roadmap')}>Cuidados</MenuItem>
                 <MenuItem onClick={()=> scrollTo('showcase')}>Especies</MenuItem>
-                <MenuItem onClick={()=> scrollTo('team')}>MushiLovers</MenuItem>
+                <MenuItem onClick={()=> scrollTo('team')}>Team monster</MenuItem>
                 <MenuItem onClick={()=> scrollTo('faq')}>Pedidos/Envios</MenuItem>
 
             </MenuItems>

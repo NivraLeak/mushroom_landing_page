@@ -1,7 +1,9 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { dark, light } from '../styles/Themes';
 
 import img1 from '../assets/strains/strainsOpt/B+ fondo.jpg';
+import Button from "../components/Button";
 
 const Section = styled.section`
   display: flex;
@@ -130,10 +132,10 @@ const Banner = () =>{
             </ImgContainer>
             <Title>Unete a la comunidad  <br/> Mushi Peru </Title>
             <BtnContainer>
-                <JoinNow>
-                    Unete ahora
-                </JoinNow>
-            </BtnContainer>
+            <ThemeProvider theme={light}>
+              <Button text="Instagram" link="https://www.instagram.com/mushi_peru?igsh=NGd5djh3Y28xZjhy&utm_source=qr" />
+            </ThemeProvider>
+            </BtnContainer> 
         </Section>
     );
 }

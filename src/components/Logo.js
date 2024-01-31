@@ -40,12 +40,11 @@ const Logo = () => {
           <Link to="/"/>
           <img src={logoImg} alt="logoMushi" loading="lazy"/>
           <h1>
-              Genetics
-              <br/>
               Mushi
+              <br/>
+              Perú
           </h1>
       </LogoContainer>
-
   )
 }
 

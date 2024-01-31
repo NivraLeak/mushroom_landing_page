@@ -124,10 +124,10 @@ const Faq = () => {
     <Section ref={ref} id="faq">
       <Title>Pedidos / Envios</Title>
         <ContainerTermn>
-            <Item>  <h3>Solo se enviará por sucursales de Shalom u Olva </h3> </Item>
-            <Item>  <h3>El envio tiene un costo adicional si desea otro medio de envio</h3> </Item>
+            <Item>  <h3>Solo se enviará por sucursales de Shalom </h3> </Item>
+            <Item>  <h3>Si desea otro metodo de envio, será por cuenta suya</h3> </Item>
             <Item>  <h3>Envios solo a nivel nacional de Perú </h3> </Item>
-            <Item>  <h3>Solo se realizaran envios los lunes, martes, miercoles</h3> </Item>
+            <Item>  <h3>Si deseas reservar un producto, puedes hacerlo aportando el 50% del precio total</h3> </Item>
             <Item>  <h3>No hay stock fijo, pregunta primero</h3>  </Item>
         </ContainerTermn>
       <Container>
@@ -141,24 +141,24 @@ const Faq = () => {
                     - Las especie provenientes de una mutacion de Melmac normalmente producen 2 flushes.<br/>
             </Accordion>
             <Accordion title="¿Como se realizan los envios?">
-                    Los envios se realizarán los lunes y martes por las agencias olva y shalom. <br/>
-                    - Luego de realizar tu pago se agendará tu pedido al dia mas cercano, ya sea martes o lunes para su envio. <br/>
-                    - Podras recoger tu pedido en un plazo maximo de 2 dias.<br/>
-                    - Los costos de envio se aplican si desea otro medio de envio.<br/>
+                    Los envios se realizarán por la agencia de shalom <br/>
+                    - Luego de completar tu pago se agendará tu pedido para su envio. <br/>
+                    - Podras recoger tu pedido en un plazo maximo de 2 dias luego de completar tu pago y recepcionar tu pedido en una agencia shalom<br/>
+                    - Si deseas otro metodo de envio, será por cuenta tuya.<br/>
             </Accordion>
-            <Accordion title="¿Que es lo que debo hacer una vez tenga mi kit?">
+            <Accordion title="¿Que es lo que debo hacer una vez tenga mi kit automatico?">
                 Primero tienes que verificar si el kit llego en optimas condiciones.<br/>
-                - Luego podras iniciar desde el paso 7 en el ciclo de cultivo. <br/>
-                - Recuerda desinfectar siempre con alcohol al 90% o lejia. <br/>
-                - Tambien para evitar contaminaciones será necesario que cierres tus puertas y ventanas antes de realizar alguna labor <br/>
+                - Luego deberas dejarlo en reposo en un lugar seguro, se recomienda encima de un mueble en una habitación cerrada. <br/>
+                - Debes dejarlo en reposo sin abrir hasta que visualices honguitos en la superficie (Esto puede demorar entre 7 - 10 dias)<br/>
+                - Una vez visualices primordios (Honguitos pequeños) en la superficie, deberas abrir y cerrar inmediatamente la bolsa, esto 1 vez por dia hasta el dia de su cosecha. <br/>
             </Accordion>
         </Box>
         <Box>
             <Accordion title="¿Que es el peso en fresco?">
-                Los hongos son un 90% de humedad e incluso a veces hasta un 93% y esto se vera reflejado en tu produccion al deshidratar tus champiñones. <br/>
+                Los hongos son un 90% de humedad e incluso a veces hasta un 93% y esto se vera reflejado en tu produccion al deshidratar tus frutos. <br/>
                 - Para calcular tus gramos en seco solo tienes que multiplicar tu peso en fresco x 0.1 <br/>
                 - Por ejemplo una cosecha mia fue de 372 gramos en fresco esto seria 37.2 gramos en seco = 372 x 0.1. <br/>
-                - Recuerda, cada especie es distinta por lo que el valor 0.1 equivalente al 10% no siempre será exacto, esto podria variar 7% - 12%
+                - Recuerda, cada especie es distinta por lo que el valor 0.1, equivalente al 10%, no siempre será exacto y esto podria variar entre un 7% - 12%
             </Accordion>
             <Accordion title="¿Como detecto contaminaciones?">
                 El micelio es blanco de por si y con un olor particular, pero al ser manipulado puede oxidarse y tornarse de un color azul verdoso. <br/>
