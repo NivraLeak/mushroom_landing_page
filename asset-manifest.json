@@ -1,15 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.4f4c8c9d.css",
-    "main.js": "/static/js/main.d89b1071.js",
+    "main.js": "/static/js/main.527c066b.js",
+    "static/media/instasave.mp4": "/static/media/instasave.fe2c4cd10e559960daaf.mp4",
+    "static/media/gandalf.png": "/static/media/gandalf.f487ed6befbd09c5c3d0.png",
     "static/media/averys.png": "/static/media/averys.cb3135639f45a94c32da.png",
     "static/media/Kitsportada.png": "/static/media/Kitsportada.19ccc1e38d7ac1d5bdfc.png",
-    "static/media/gandalf.png": "/static/media/gandalf.7edb55a6c72139407fa8.png",
-    "static/media/Amvp.png": "/static/media/Amvp.1c2f5be41066ef7cf55c.png",
+    "static/media/toque.png": "/static/media/toque.66bfcff6ee281e1e488f.png",
     "static/media/melmac-thransaker.png": "/static/media/melmac-thransaker.23fe15d30c69eef07b3c.png",
     "static/media/instasaveindica.mp4": "/static/media/instasaveindica.6bed1a223aa70e273249.mp4",
-    "static/media/instasave.mp4": "/static/media/instasave.1a70b84be84b54e48183.mp4",
-    "static/media/mushi.png": "/static/media/mushi.258f48655629889c2417.png",
     "static/media/akaya-telivigala-all-400-normal.woff": "/static/media/akaya-telivigala-all-400-normal.78fd8cb2a221beeb77ce.woff",
     "static/media/Rounded-Text-Black.png": "/static/media/Rounded-Text-Black.a70a8e55d32e29aa2b27.png",
     "static/media/sustrato.jpg": "/static/media/sustrato.3db522409a7e8c44a1ec.jpg",
@@ -26,8 +25,8 @@
     "static/media/ThaiKohsumui.jpg": "/static/media/ThaiKohsumui.784042b2d43d9b200f83.jpg",
     "static/media/granoInoculado.jpg": "/static/media/granoInoculado.de09cf86705d751491b9.jpg",
     "static/media/gandalf03.jpg": "/static/media/gandalf03.f70530b985ee5ef17471.jpg",
+    "static/media/logo_cat.png": "/static/media/logo_cat.a35017a1a2b0d40affeb.png",
     "static/media/akaya-telivigala-latin-400-normal.woff2": "/static/media/akaya-telivigala-latin-400-normal.6adfb2bb1dd65aa73a6c.woff2",
-    "static/media/gandalf.jpg": "/static/media/gandalf.5bc2fdb9930edb422c03.jpg",
     "static/media/sora-all-400-normal.woff": "/static/media/sora-all-400-normal.fc2a204a844d60c30272.woff",
     "static/media/akaya-telivigala-latin-ext-400-normal.woff2": "/static/media/akaya-telivigala-latin-ext-400-normal.806924fe3d6edb5e4e59.woff2",
     "static/media/sora-latin-400-normal.woff2": "/static/media/sora-latin-400-normal.7055d291e674243dedf8.woff2",
@@ -35,10 +34,10 @@
     "static/media/Arrow.svg": "/static/media/Arrow.2aa046cef6c722596b055a335b4a9792.svg",
     "index.html": "/index.html",
     "main.4f4c8c9d.css.map": "/static/css/main.4f4c8c9d.css.map",
-    "main.d89b1071.js.map": "/static/js/main.d89b1071.js.map"
+    "main.527c066b.js.map": "/static/js/main.527c066b.js.map"
   },
   "entrypoints": [
     "static/css/main.4f4c8c9d.css",
-    "static/js/main.d89b1071.js"
+    "static/js/main.527c066b.js"
   ]
 }
